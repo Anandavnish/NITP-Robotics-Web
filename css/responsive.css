@@ -1,0 +1,294 @@
+/* ===================================
+   ROBOTICS CLUB - RESPONSIVE STYLES
+   Media queries for all breakpoints
+   =================================== */
+
+/* ===================================
+   TABLET (768px and below)
+   =================================== */
+@media (max-width: 768px) {
+    /* Typography adjustments */
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    h3 {
+        font-size: 1.5rem;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    /* Navigation */
+    .mobile-menu-toggle {
+        display: flex;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: rgba(26, 26, 46, 0.98);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        transition: left 0.3s ease;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-menu li a {
+        font-size: 1.5rem;
+    }
+    
+    /* Grid layouts */
+    .grid-2,
+    .grid-3,
+    .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Container padding */
+    .container {
+        padding: 0 1.5rem;
+    }
+    
+    .section {
+        padding: 60px 0;
+    }
+    
+    /* Hero section */
+    .hero {
+        min-height: 80vh;
+    }
+    
+    .hero-content {
+        padding: 1.5rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+    }
+    
+    /* Timeline */
+    .timeline::before {
+        left: 20px;
+    }
+    
+    .timeline-item {
+        flex-direction: row !important;
+        padding-left: 50px;
+    }
+    
+    .timeline-content {
+        width: 100%;
+    }
+    
+    .timeline-year {
+        left: 20px;
+        transform: translateX(0);
+    }
+    
+    /* Stats container */
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .stat-item {
+        padding: 1.5rem;
+    }
+    
+    .stat-number {
+        font-size: 2.5rem;
+    }
+    
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+/* ===================================
+   MOBILE (480px and below)
+   =================================== */
+@media (max-width: 480px) {
+    /* Typography */
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.75rem;
+    }
+    
+    h3 {
+        font-size: 1.25rem;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+        letter-spacing: 1px;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .hero-description {
+        font-size: 0.95rem;
+    }
+    
+    /* Navigation */
+    .navbar {
+        padding: 1rem 1.5rem;
+    }
+    
+    .logo {
+        font-size: 1.2rem;
+    }
+    
+    /* Grid layouts - single column */
+    .grid-2,
+    .grid-3,
+    .grid-4 {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Container */
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .section {
+        padding: 40px 0;
+    }
+    
+    /* Buttons */
+    .btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.95rem;
+    }
+    
+    /* Cards */
+    .card {
+        padding: 1.25rem;
+    }
+    
+    .card-img {
+        height: 180px;
+    }
+    
+    /* Stats */
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+    
+    /* Filter buttons */
+    .filter-container {
+        gap: 0.5rem;
+    }
+    
+    .filter-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+    
+    /* Forms */
+    .form-input,
+    .form-textarea,
+    .form-select {
+        padding: 0.75rem;
+        font-size: 0.95rem;
+    }
+    
+    /* Footer */
+    .footer {
+        padding: 2rem 1rem 1rem;
+    }
+    
+    .social-links a {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+}
+
+/* ===================================
+   LARGE DESKTOP (1400px and above)
+   =================================== */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1400px;
+    }
+    
+    .hero-title {
+        font-size: 5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.75rem;
+    }
+}
+
+/* ===================================
+   LANDSCAPE ORIENTATION (Mobile)
+   =================================== */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        min-height: auto;
+        padding: 100px 0 50px;
+    }
+    
+    .nav-menu {
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: auto;
+        padding: 2rem;
+    }
+}
+
+/* ===================================
+   PRINT STYLES
+   =================================== */
+@media print {
+    .navbar,
+    .mobile-menu-toggle,
+    .footer,
+    .btn {
+        display: none;
+    }
+    
+    body {
+        background: white;
+        color: black;
+    }
+    
+    .hero::before {
+        display: none;
+    }
+}

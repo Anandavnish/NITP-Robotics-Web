@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Explore innovative robotics projects by Robotics Club NIT Patna - drones, robotic arms, AI systems, and more">
+    <title>Projects - Robotics Club NIT Patna</title>
+
+
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/components.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Robotics Club</a>
+
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="achievements.html">Achievements</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Page Header -->
+        <section class="hero" style="background-image: url('./assets/robot-arm-assembly.jpg'); min-height: 50vh;">
+            <div class="hero-content">
+                <h1 class="hero-title">Our Projects</h1>
+                <p class="hero-subtitle">Innovation Through Hands-On Engineering</p>
+            </div>
+        </section>
+
+        <!-- Filter Section -->
+        <section class="section">
+            <div class="container">
+                <div class="filter-container">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="drone">Drones</button>
+                    <button class="filter-btn" data-filter="robotic-arm">Robotic Arms</button>
+                    <button class="filter-btn" data-filter="ai">AI & ML</button>
+                    <button class="filter-btn" data-filter="iot">IoT</button>
+                    <button class="filter-btn" data-filter="autonomous">Autonomous Systems</button>
+                </div>
+
+                <!-- Projects Grid -->
+                <div class="grid grid-3">
+                    <!-- Project 1 -->
+                    <div class="card project-card" data-category="autonomous" data-year="2025"
+                        data-technologies="ROS, Python, OpenCV, LiDAR">
+                        <img src="./assets/autonomous-vehicle.jpg" alt="Autonomous Navigation Robot" class="card-img">
+                        <span class="badge">2025</span>
+                        <span class="badge badge-cyan">Autonomous</span>
+                        <h3 class="card-title">Autonomous Navigation Robot</h3>
+                        <p class="card-text">
+                            An intelligent robot capable of autonomous navigation using SLAM algorithms, obstacle
+                            avoidance with LiDAR sensors, and path planning in dynamic environments. Won 1st place at
+                            National Robotics Championship 2025.
+                        </p>
+                        <div class="card-footer">
+                            <div>
+                                <span class="badge">ROS</span>
+                                <span class="badge">Python</span>
+                            </div>
+                            <button class="btn btn-secondary project-detail-btn">View Details</button>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="card project-card" data-category="drone" data-year="2024"
+                        data-technologies="Arduino, GPS, IMU, PID Control">
+                        <img src="./images/projects/drone-flight-testing.jpg" alt="Autonomous Delivery Drone"
+                            class="card-img">
+                        <span class="badge">2024</span>
+                        <span class="badge badge-cyan">Drone</span>
+                        <h3 class="card-title">Autonomous Delivery Drone</h3>
+                        <p class="card-text">
+                            A quadcopter drone designed for autonomous package delivery with GPS waypoint navigation,
+                            real-time telemetry, and emergency landing capabilities. Successfully tested for 5km range
+                            delivery missions.
+                        </p>
+                        <div class="card-footer">
+                            <div>
+                                <span class="badge">Arduino</span>
+                                <span class="badge">GPS</span>
+                            </div>
+                            <button class="btn btn-secondary project-detail-btn">View Details</button>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="card project-card" data-category="robotic-arm" data-year="2024"
+                        data-technologies="Inverse Kinematics, Servo Motors, Computer Vision">
+                        <img src="./assets/robot-arm-assembly.jpg" alt="6-DOF Robotic Arm" class="card-img">
+                        <span class="badge">2024</span>
+                        <span class="badge badge-cyan">Robotic Arm</span>
+                        <h3 class="card-title">6-DOF Robotic Manipulator</h3>
+                        <p class="card-text">
+                            A 6 degrees-of-freedom robotic arm with inverse kinematics control, computer vision-based
+                            object detection, and precise pick-and-place operations. Used in industrial automation
+                            demonstrations.
+                        </p>
+                        <div class="card-footer">
+                            <div>
+                                <span class="badge">Kinematics</span>
+                                <span class="badge">CV</span>
+                            </div>
+                            <button class="btn btn-secondary project-detail-btn">View Details</button>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="card project-card" data-category="ai" data-year="2025"
+                        data-technologies="TensorFlow, Python, Raspberry Pi, Camera">
+                        <img src="./assets/ai-robot-interaction.jpg" alt="AI-Powered Gesture Control" class="card-img">
+                        <span class="badge">2025</span>
+                        <span class="badge badge-cyan">AI & ML</span>
+                        <h3 class="card-title">AI-Powered Gesture Control Robot</h3>
+                        <p class="card-text">
+                            A robot controlled through hand gestures using deep learning-based gesture recognition.
+                            Implements real-time pose estimation and natural human-robot interaction using computer
+                            vision and neural networks.
+                        </p>
+                        <div class="card-footer">
+                            <div>
+                                <span class="badge">TensorFlow</span>
+                                <span class="badge">Python</span>
+                            </div>
+                            <button class="btn btn-secondary project-detail-btn">View Details</button>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="card project-card" data-category="iot" data-year="2023"
+                        data-technologies="ESP32, MQTT, Cloud, Sensors">
+                        <img src="./assets/circuit-board-closeup.jpg" alt="IoT Smart Agriculture Robot"
+                            class="card-img">
+                        <span class="badge">2023</span>
+                        <span class="badge badge-cyan">IoT</span>
+                        <h3 class="card-title">IoT Smart Agriculture Robot</h3>
+                        <p class="card-text">
+                            An IoT-enabled agricultural robot for automated crop monitoring, soil analysis, and
+                            precision irrigation. Collects real-time data on temperature, humidity, and soil moisture
+                            with cloud connectivity.
+                        </p>
+                        <div class="card-footer">
+                            <div>
+                                <span class="badge">ESP32</span>
+                                <span class="badge">IoT</span>
+                            </div>
+                            <button class="btn btn-secondary project-detail-btn">View Details</button>
+                        </div>
+                    </div>
+
+                    <!-- Project 6 -->
+                    <div class="card project-card" data-category="autonomous" data-year="2023"
+                        data-technologies="Swarm Intelligence, Multi-Agent Systems, Python">
+                        <img src="./assets/competition-arena.jpg" alt="Swarm Robotics System" class="card-img">
+                        <span class="badge">2023</span>
+                        <span class="badge badge-cyan">Autonomous</span>
+                        <h3 class="card-title">Swarm Robotics System</h3>
+                        <p class="card-text">
+                            A multi-robot system demonstrating swarm intelligence for collaborative task execution.
+                            Implements decentralized control, inter-robot communication, and collective behavior for
+                            search and rescue operations.
+                        </p>
+                        <div class="card-footer">
+                            <div>
+                                <span class="badge">Swarm AI</span>
+                                <span class="badge">Python</span>
+                            </div>
+                            <button class="btn btn-secondary project-detail-btn">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Statistics -->
+        <section class="section" style="background: var(--secondary-bg);">
+            <div class="container">
+                <h2 class="section-title">Project Impact</h2>
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="25">0+</div>
+                        <div class="stat-label">Completed Projects</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="8">0+</div>
+                        <div class="stat-label">Ongoing Projects</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="5">0+</div>
+                        <div class="stat-label">Research Papers</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="12">0+</div>
+                        <div class="stat-label">Competition Wins</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="section" style="text-align: center; padding: 5rem 2rem;">
+            <div class="container">
+                <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Have a Project Idea?</h2>
+                <p style="font-size: 1.2rem; color: var(--text-gray); max-width: 700px; margin: 0 auto 2rem;">
+                    We're always looking for innovative project ideas and collaborations. Share your vision with us and
+                    let's build something amazing together!
+                </p>
+                <a href="contact.html" class="btn btn-primary" style="font-size: 1.1rem; padding: 1rem 2.5rem;">Propose
+                    a Project</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Robotics Club</h3>
+                <p>National Institute of Technology Patna</p>
+                <p>Innovating the future of robotics through education, research, and competition.</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/company/robotics-club-nit-patna" target="_blank"
+                        aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/robotics_club_nitp" target="_blank" aria-label="Instagram"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/RoboticsClubNITPatna" target="_blank" aria-label="Facebook"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://github.com/robotics-club-nitp" target="_blank" aria-label="GitHub"><i
+                            class="fab fa-github"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="about.html">About Us</a>
+                <a href="projects.html">Projects</a>
+                <a href="events.html">Events</a>
+                <a href="team.html">Team</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <a href="news.html">News & Updates</a>
+                <a href="achievements.html">Achievements</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="contact.html#faq">FAQ</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-envelope"></i> <a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                        data-cfemail="e5978a878a918c869686899087a58b8c9195cb8486cb8c8b">[email&#160;protected]</a></p>
+                <p><i class="fas fa-map-marker-alt"></i> NIT Patna, Bihar 800005</p>
+                <p><i class="fas fa-clock"></i> Mon-Fri: 9:00 AM - 6:00 PM</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Robotics Club, NIT Patna. All rights reserved. | Designed for Web Development Challenge</p>
+        </div>
+    </footer>
+
+    <button id="backToTop"
+        style="display: none; position: fixed; bottom: 30px; right: 30px; background: var(--success-cyan); color: var(--primary-bg); width: 50px; height: 50px; border: none; border-radius: 50%; cursor: pointer; font-size: 1.5rem; z-index: 999; box-shadow: 0 4px 15px var(--shadow-glow);">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/filters.js"></script>
+    <script src="./js/modals.js"></script>
+</body>
+
+</html>

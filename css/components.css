@@ -1,0 +1,459 @@
+/* ===================================
+   ROBOTICS CLUB - REUSABLE COMPONENTS
+   Buttons, Cards, Forms, and UI Elements
+   =================================== */
+
+/* ===================================
+   BUTTONS
+   =================================== */
+.btn {
+    display: inline-block;
+    padding: 0.875rem 2rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--action-blue), var(--success-cyan));
+    color: var(--text-white);
+    box-shadow: 0 4px 15px rgba(50, 130, 184, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px var(--shadow-glow);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--success-cyan);
+    color: var(--success-cyan);
+}
+
+.btn-outline:hover {
+    background: var(--success-cyan);
+    color: var(--primary-bg);
+}
+
+.btn-secondary {
+    background: var(--accent-blue);
+    color: var(--text-white);
+}
+
+.btn-secondary:hover {
+    background: var(--action-blue);
+}
+
+/* ===================================
+   CARDS
+   =================================== */
+.card {
+    background: var(--secondary-bg);
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.card:hover {
+    border-color: var(--card-border);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px var(--shadow-glow);
+}
+
+.card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-white);
+}
+
+.card-text {
+    color: var(--text-gray);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.card-footer {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--accent-blue);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ===================================
+   GRID LAYOUTS
+   =================================== */
+.grid {
+    display: grid;
+    gap: 2rem;
+}
+
+.grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+}
+
+.grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* ===================================
+   HERO SECTION
+   =================================== */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: transparent;
+    /* Fallback/Base color */
+    overflow: hidden;
+    /* Ensure particles don't scrollbar */
+}
+
+#heroCanvas {
+    position: fixed;
+    /* Fixed background */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    /* Full viewport height */
+    z-index: -1;
+    /* Behind everything */
+    background: radial-gradient(circle at center, #1a1a2e 0%, #0f1c2e 100%);
+    /* Deep dark blue gradient */
+}
+
+.hero::before {
+    /* Optional: Keep dark overlay if needed, or remove if canvas is opaque */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+    /* Let canvas show */
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 2rem;
+    /* Blur effect for text focus */
+    background: rgba(26, 26, 46, 0.3);
+    /* Slight semi-transparent dark bg */
+    backdrop-filter: blur(5px);
+    /* The visual blur focus */
+    border-radius: 16px;
+    border: 1px solid rgba(0, 217, 255, 0.1);
+    /* Subtle border */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center everything including logo */
+}
+
+.hero-logo {
+    width: 200px;
+    /* Enlarge logo as requested */
+    height: auto;
+    margin-bottom: 1.5rem;
+    filter: drop-shadow(0 0 15px rgba(0, 217, 255, 0.6));
+    /* Enhanced glow */
+}
+
+.hero-title {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    animation: fadeInUp 1s ease;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: var(--success-cyan);
+    margin-bottom: 2rem;
+    font-family: 'Inter', sans-serif;
+    animation: fadeInUp 1s ease 0.2s backwards;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    color: var(--text-gray);
+    margin-bottom: 2rem;
+    animation: fadeInUp 1s ease 0.4s backwards;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: fadeInUp 1s ease 0.6s backwards;
+}
+
+/* ===================================
+   FORMS
+   =================================== */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-white);
+    font-weight: 500;
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    background: var(--secondary-bg);
+    border: 2px solid var(--accent-blue);
+    border-radius: 8px;
+    color: var(--text-white);
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+    outline: none;
+    border-color: var(--success-cyan);
+    box-shadow: 0 0 0 3px rgba(0, 217, 255, 0.1);
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* ===================================
+   BADGES & TAGS
+   =================================== */
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border-radius: 20px;
+    background: var(--accent-blue);
+    color: var(--text-white);
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.badge-cyan {
+    background: var(--success-cyan);
+    color: var(--primary-bg);
+}
+
+/* ===================================
+   STATS COUNTER
+   =================================== */
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 2rem;
+    background: var(--secondary-bg);
+    border-radius: 12px;
+    border: 2px solid var(--accent-blue);
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+    border-color: var(--success-cyan);
+    transform: translateY(-5px);
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--success-cyan);
+    font-family: 'Orbitron', sans-serif;
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: var(--text-gray);
+    margin-top: 0.5rem;
+}
+
+/* ===================================
+   TIMELINE
+   =================================== */
+.timeline {
+    position: relative;
+    padding: 2rem 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--accent-blue);
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+}
+
+.timeline-item:nth-child(odd) {
+    flex-direction: row;
+}
+
+.timeline-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.timeline-content {
+    width: 45%;
+    padding: 1.5rem;
+    background: var(--secondary-bg);
+    border-radius: 12px;
+    border: 2px solid var(--accent-blue);
+}
+
+.timeline-year {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--success-cyan);
+    color: var(--primary-bg);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 700;
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* ===================================
+   FILTER BUTTONS
+   =================================== */
+.filter-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.filter-btn {
+    padding: 0.625rem 1.5rem;
+    background: var(--secondary-bg);
+    border: 2px solid var(--accent-blue);
+    border-radius: 25px;
+    color: var(--text-white);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--success-cyan);
+    border-color: var(--success-cyan);
+    color: var(--primary-bg);
+}
+
+/* ===================================
+   ANIMATIONS
+   =================================== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.animate-pulse {
+    animation: pulse 2s infinite;
+}
+
+/* ===================================
+   LOADING SPINNER
+   =================================== */
+.spinner {
+    border: 3px solid var(--accent-blue);
+    border-top: 3px solid var(--success-cyan);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 2rem auto;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

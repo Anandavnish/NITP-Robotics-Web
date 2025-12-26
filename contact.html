@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Contact Robotics Club NIT Patna - Get in touch, join the club, and find answers to frequently asked questions">
+    <title>Contact Us - Robotics Club NIT Patna</title>
+
+
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/components.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Robotics Club</a>
+
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="achievements.html">Achievements</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Page Header -->
+        <section class="hero" style="background-image: url('./images/background/lab-equipment.jpg'); min-height: 50vh;">
+            <div class="hero-content">
+                <h1 class="hero-title">Contact Us</h1>
+                <p class="hero-subtitle">Get in Touch with Our Team</p>
+            </div>
+        </section>
+
+        <!-- Contact Information & Form -->
+        <section class="section">
+            <div class="container">
+                <div class="grid grid-2" style="gap: 4rem;">
+                    <!-- Contact Details -->
+                    <div>
+                        <h2 style="margin-bottom: 2rem;">Contact Information</h2>
+
+                        <div class="card" style="margin-bottom: 2rem;">
+                            <i class="fas fa-envelope"
+                                style="font-size: 2rem; color: var(--success-cyan); margin-bottom: 1rem;"></i>
+                            <h3 class="card-title">Email</h3>
+                            <p class="card-text">
+                                <a href="/cdn-cgi/l/email-protection#4c3e232e2338252f3f2f20392e0c2225383c622d2f622522"
+                                    style="color: var(--success-cyan);"><span class="__cf_email__"
+                                        data-cfemail="691b060b061d000a1a0a051c0b2907001d1947080a470007">[email&#160;protected]</span></a>
+                            </p>
+                            <p style="color: var(--text-gray); font-size: 0.9rem; margin-top: 0.5rem;">
+                                We typically respond within 24-48 hours
+                            </p>
+                        </div>
+
+                        <div class="card" style="margin-bottom: 2rem;">
+                            <i class="fas fa-map-marker-alt"
+                                style="font-size: 2rem; color: var(--success-cyan); margin-bottom: 1rem;"></i>
+                            <h3 class="card-title">Location</h3>
+                            <p class="card-text">
+                                Robotics Lab, Building No. 5<br>
+                                National Institute of Technology Patna<br>
+                                Ashok Rajpath, Patna<br>
+                                Bihar - 800005, India
+                            </p>
+                        </div>
+
+                        <div class="card" style="margin-bottom: 2rem;">
+                            <i class="fas fa-clock"
+                                style="font-size: 2rem; color: var(--success-cyan); margin-bottom: 1rem;"></i>
+                            <h3 class="card-title">Meeting Times</h3>
+                            <p class="card-text">
+                                <strong>Regular Meetings:</strong><br>
+                                Every Saturday, 4:00 PM - 6:00 PM<br><br>
+                                <strong>Lab Access:</strong><br>
+                                Monday - Friday: 9:00 AM - 6:00 PM<br>
+                                Saturday: 10:00 AM - 5:00 PM
+                            </p>
+                        </div>
+
+                        <div class="card">
+                            <h3 class="card-title">Follow Us</h3>
+                            <div class="social-links" style="margin-top: 1rem;">
+                                <a href="https://www.linkedin.com/company/robotics-club-nit-patna" target="_blank"
+                                    aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="https://www.instagram.com/robotics_club_nitp" target="_blank"
+                                    aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.facebook.com/RoboticsClubNITPatna" target="_blank"
+                                    aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://github.com/robotics-club-nitp" target="_blank" aria-label="GitHub"><i
+                                        class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div>
+                        <h2 style="margin-bottom: 2rem;">Send Us a Message</h2>
+                        <form id="contactForm" class="card" style="padding: 2rem;">
+                            <div class="form-group">
+                                <label for="name" class="form-label">Full Name *</label>
+                                <input type="text" id="name" name="name" class="form-input" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email Address *</label>
+                                <input type="email" id="email" name="email" class="form-input" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" class="form-input">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="purpose" class="form-label">Purpose of Contact *</label>
+                                <select id="purpose" name="purpose" class="form-select" required>
+                                    <option value="">Select a purpose</option>
+                                    <option value="general">General Inquiry</option>
+                                    <option value="join">Join the Club</option>
+                                    <option value="event">Event Question</option>
+                                    <option value="collaboration">Collaboration Proposal</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message" class="form-label">Message *</label>
+                                <textarea id="message" name="message" class="form-textarea" rows="5"
+                                    required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">
+                                <i class="fas fa-paper-plane"></i> Send Message
+                            </button>
+
+                            <p
+                                style="color: var(--text-gray); font-size: 0.85rem; margin-top: 1rem; text-align: center;">
+                                * Required fields. We respect your privacy and will never share your information.
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location Map -->
+        <section class="section" style="background: var(--secondary-bg);">
+            <div class="container">
+                <h2 class="section-title">Find Us</h2>
+                <div
+                    style="width: 100%; height: 400px; background: var(--primary-bg); border-radius: 12px; display: flex; align-items: center; justify-content: center; border: 2px solid var(--accent-blue);">
+                    <div style="text-align: center;">
+                        <i class="fas fa-map-marked-alt"
+                            style="font-size: 4rem; color: var(--success-cyan); margin-bottom: 1rem;"></i>
+                        <h3 style="color: var(--text-white); margin-bottom: 0.5rem;">NIT Patna Campus</h3>
+                        <p style="color: var(--text-gray);">Robotics Lab, Building No. 5</p>
+                        <p style="color: var(--text-gray); margin-bottom: 1.5rem;">Ashok Rajpath, Patna, Bihar - 800005
+                        </p>
+                        <a href="https://maps.google.com/?q=NIT+Patna" target="_blank" class="btn btn-primary">
+                            <i class="fas fa-directions"></i> Get Directions
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section" id="faq">
+            <div class="container">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <div style="max-width: 900px; margin: 0 auto;">
+                    <div class="card" style="margin-bottom: 1.5rem; padding: 2rem;">
+                        <h3 style="color: var(--success-cyan); margin-bottom: 1rem;">
+                            <i class="fas fa-question-circle"></i> How can I join the Robotics Club?
+                        </h3>
+                        <p style="color: var(--text-gray); line-height: 1.8;">
+                            Any student from NIT Patna can join the Robotics Club. We conduct recruitment drives at the
+                            beginning of each semester. Fill out the contact form above with "Join the Club" as the
+                            purpose, and we'll send you details about the next recruitment process. You can also attend
+                            our Saturday meetings to learn more about the club.
+                        </p>
+                    </div>
+
+                    <div class="card" style="margin-bottom: 1.5rem; padding: 2rem;">
+                        <h3 style="color: var(--success-cyan); margin-bottom: 1rem;">
+                            <i class="fas fa-question-circle"></i> Do I need prior robotics experience to join?
+                        </h3>
+                        <p style="color: var(--text-gray); line-height: 1.8;">
+                            No prior experience is required! We welcome students from all years and branches. We provide
+                            comprehensive training through workshops and mentorship programs. Whether you're interested
+                            in hardware, software, AI, or design, there's a place for you in our club.
+                        </p>
+                    </div>
+
+                    <div class="card" style="margin-bottom: 1.5rem; padding: 2rem;">
+                        <h3 style="color: var(--success-cyan); margin-bottom: 1rem;">
+                            <i class="fas fa-question-circle"></i> What are the club membership fees?
+                        </h3>
+                        <p style="color: var(--text-gray); line-height: 1.8;">
+                            There is a nominal annual membership fee of ₹500 which covers basic materials and access to
+                            lab facilities. Additional costs may apply for specific competitions or advanced projects,
+                            but we also have sponsorships and grants to support students.
+                        </p>
+                    </div>
+
+                    <div class="card" style="margin-bottom: 1.5rem; padding: 2rem;">
+                        <h3 style="color: var(--success-cyan); margin-bottom: 1rem;">
+                            <i class="fas fa-question-circle"></i> How often are workshops conducted?
+                        </h3>
+                        <p style="color: var(--text-gray); line-height: 1.8;">
+                            We conduct workshops regularly throughout the semester, typically 2-3 per month. Topics
+                            range from basic Arduino programming to advanced topics like ROS, machine learning, and
+                            computer vision. Workshop schedules are announced on our social media channels and during
+                            Saturday meetings.
+                        </p>
+                    </div>
+
+                    <div class="card" style="margin-bottom: 1.5rem; padding: 2rem;">
+                        <h3 style="color: var(--success-cyan); margin-bottom: 1rem;">
+                            <i class="fas fa-question-circle"></i> Can I propose my own project idea?
+                        </h3>
+                        <p style="color: var(--text-gray); line-height: 1.8;">
+                            Absolutely! We encourage members to propose innovative project ideas. You can present your
+                            idea during our Saturday meetings or submit it through the contact form. If approved, you'll
+                            receive mentorship, resources, and team support to bring your idea to life.
+                        </p>
+                    </div>
+
+                    <div class="card" style="padding: 2rem;">
+                        <h3 style="color: var(--success-cyan); margin-bottom: 1rem;">
+                            <i class="fas fa-question-circle"></i> How can external organizations collaborate with the
+                            club?
+                        </h3>
+                        <p style="color: var(--text-gray); line-height: 1.8;">
+                            We welcome collaborations with industry partners, research institutions, and other
+                            organizations. Please contact us via email at <a href="/cdn-cgi/l/email-protection"
+                                class="__cf_email__"
+                                data-cfemail="5c2e333e3328353f2f3f30293e1c3235282c723d3f723532">[email&#160;protected]</a>
+                            with "Collaboration Proposal" in the subject line, or fill out the contact form above. We're
+                            open to sponsorships, joint projects, guest lectures, and internship opportunities.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Contact Cards -->
+        <section class="section" style="background: var(--secondary-bg);">
+            <div class="container">
+                <h2 class="section-title">Quick Contact</h2>
+                <div class="grid grid-3">
+                    <div class="card" style="text-align: center;">
+                        <i class="fas fa-user-tie"
+                            style="font-size: 3rem; color: var(--success-cyan); margin-bottom: 1rem;"></i>
+                        <h3 class="card-title">Faculty Advisor</h3>
+                        <p class="card-text">
+                            Dr. Amit Kumar<br>
+                            Professor, EE Department<br>
+                            <a href="/cdn-cgi/l/email-protection#6504080c114b0e10080417250b0c11154b04064b0c0b"
+                                style="color: var(--success-cyan);"><span class="__cf_email__"
+                                    data-cfemail="1d7c707469337668707c6f5d7374696d337c7e337473">[email&#160;protected]</span></a>
+                        </p>
+                    </div>
+
+                    <div class="card" style="text-align: center;">
+                        <i class="fas fa-user"
+                            style="font-size: 3rem; color: var(--success-cyan); margin-bottom: 1rem;"></i>
+                        <h3 class="card-title">Club President</h3>
+                        <p class="card-text">
+                            Rahul Sharma<br>
+                            4th Year, ECE<br>
+                            <a href="tel:+919876543210" style="color: var(--success-cyan);">+91 98765 43210</a>
+                        </p>
+                    </div>
+
+                    <div class="card" style="text-align: center;">
+                        <i class="fas fa-envelope-open-text"
+                            style="font-size: 3rem; color: var(--success-cyan); margin-bottom: 1rem;"></i>
+                        <h3 class="card-title">General Inquiries</h3>
+                        <p class="card-text">
+                            For all general questions<br>
+                            <a href="/cdn-cgi/l/email-protection#25574a474a514c465646495047654b4c51550b44460b4c4b"
+                                style="color: var(--success-cyan);"><span class="__cf_email__"
+                                    data-cfemail="54263b363b203d372737382136143a3d20247a35377a3d3a">[email&#160;protected]</span></a><br>
+                            Response time: 24-48 hours
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Robotics Club</h3>
+                <p>National Institute of Technology Patna</p>
+                <p>Innovating the future of robotics through education, research, and competition.</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/company/robotics-club-nit-patna" target="_blank"
+                        aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/robotics_club_nitp" target="_blank" aria-label="Instagram"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/RoboticsClubNITPatna" target="_blank" aria-label="Facebook"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://github.com/robotics-club-nitp" target="_blank" aria-label="GitHub"><i
+                            class="fab fa-github"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="about.html">About Us</a>
+                <a href="projects.html">Projects</a>
+                <a href="events.html">Events</a>
+                <a href="team.html">Team</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <a href="news.html">News & Updates</a>
+                <a href="achievements.html">Achievements</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="contact.html#faq">FAQ</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-envelope"></i> <a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                        data-cfemail="6f1d000d001b060c1c0c031a0d2f01061b1f410e0c410601">[email&#160;protected]</a></p>
+                <p><i class="fas fa-map-marker-alt"></i> NIT Patna, Bihar 800005</p>
+                <p><i class="fas fa-clock"></i> Mon-Fri: 9:00 AM - 6:00 PM</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Robotics Club, NIT Patna. All rights reserved. | Designed for Web Development Challenge</p>
+        </div>
+    </footer>
+
+    <button id="backToTop"
+        style="display: none; position: fixed; bottom: 30px; right: 30px; background: var(--success-cyan); color: var(--primary-bg); width: 50px; height: 50px; border: none; border-radius: 50%; cursor: pointer; font-size: 1.5rem; z-index: 999; box-shadow: 0 4px 15px var(--shadow-glow);">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/filters.js"></script>
+    <script src="./js/modals.js"></script>
+
+    <script>
+        // Contact Form Submission Handler
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // In production, this would send data to backend API
+            // For now, show success message
+            showNotification('Thank you for contacting us! We will get back to you within 24-48 hours.', 'success');
+
+            // Reset form
+            this.reset();
+
+            // Future API call would be here:
+            // const formData = new FormData(this);
+            // fetch('/api/contact', {
+            //     method: 'POST',
+            //     body: formData
+            // })
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Upcoming and past robotics events, workshops, competitions, and guest lectures at Robotics Club NIT Patna">
+    <title>Events - Robotics Club NIT Patna</title>
+
+
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/components.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Robotics Club</a>
+
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="events.html" class="active">Events</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="achievements.html">Achievements</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Page Header -->
+        <section class="hero" style="background-image: url('./assets/workshop-students.jpg'); min-height: 50vh;">
+            <div class="hero-content">
+                <h1 class="hero-title">Events</h1>
+                <p class="hero-subtitle">Workshops, Competitions & Learning Opportunities</p>
+            </div>
+        </section>
+
+        <!-- Upcoming Events -->
+        <section class="section">
+            <div class="container">
+                <div
+                    style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
+                    <h2 class="section-title" style="margin-bottom: 0;">Upcoming Events</h2>
+                    <select id="eventSort" class="form-select" style="width: 200px;">
+                        <option value="date">Sort by Date</option>
+                        <option value="name">Sort by Name</option>
+                    </select>
+                </div>
+
+                <div class="grid grid-2 events-grid">
+                    <!-- Event 1 -->
+                    <div class="card event-card" data-date="2026-01-25" data-name="AI & Robotics Workshop">
+                        <span class="badge badge-cyan">Workshop</span>
+                        <h3 class="card-title">AI & Robotics Integration Workshop</h3>
+                        <p style="color: var(--text-gray); margin-bottom: 1rem;">
+                            <i class="fas fa-calendar"></i> January 25, 2026<br>
+                            <i class="fas fa-clock"></i> 10:00 AM - 4:00 PM<br>
+                            <i class="fas fa-map-marker-alt"></i> Robotics Lab, NIT Patna
+                        </p>
+                        <p class="card-text">
+                            Learn to integrate artificial intelligence with robotics systems. Topics include computer
+                            vision, machine learning for robotics, and autonomous decision-making algorithms.
+                        </p>
+                        <button class="btn btn-primary register-btn"
+                            data-event-name="AI & Robotics Integration Workshop" style="width: 100%; margin-top: 1rem;">
+                            Register Interest
+                        </button>
+                    </div>
+
+                    <!-- Event 2 -->
+                    <div class="card event-card" data-date="2026-02-05" data-name="ROS Basics">
+                        <span class="badge badge-cyan">Workshop</span>
+                        <h3 class="card-title">ROS (Robot Operating System) Basics</h3>
+                        <p style="color: var(--text-gray); margin-bottom: 1rem;">
+                            <i class="fas fa-calendar"></i> February 5, 2026<br>
+                            <i class="fas fa-clock"></i> 2:00 PM - 6:00 PM<br>
+                            <i class="fas fa-map-marker-alt"></i> Computer Lab, NIT Patna
+                        </p>
+                        <p class="card-text">
+                            Introduction to Robot Operating System (ROS) - the industry-standard framework for robot
+                            software development. Hands-on session with simulation and real robots.
+                        </p>
+                        <button class="btn btn-primary register-btn" data-event-name="ROS Basics Workshop"
+                            style="width: 100%; margin-top: 1rem;">
+                            Register Interest
+                        </button>
+                    </div>
+
+                    <!-- Event 3 -->
+                    <div class="card event-card" data-date="2026-02-15" data-name="Drone Building">
+                        <span class="badge badge-cyan">Competition</span>
+                        <h3 class="card-title">Drone Building Competition</h3>
+                        <p style="color: var(--text-gray); margin-bottom: 1rem;">
+                            <i class="fas fa-calendar"></i> February 15, 2026<br>
+                            <i class="fas fa-clock"></i> 9:00 AM - 5:00 PM<br>
+                            <i class="fas fa-map-marker-alt"></i> Open Ground, NIT Patna
+                        </p>
+                        <p class="card-text">
+                            Build and fly your own drone! Teams will design, assemble, and test quadcopters. Prizes for
+                            best design, longest flight time, and most stable flight.
+                        </p>
+                        <button class="btn btn-primary register-btn" data-event-name="Drone Building Competition"
+                            style="width: 100%; margin-top: 1rem;">
+                            Register Interest
+                        </button>
+                    </div>
+
+                    <!-- Event 4 -->
+                    <div class="card event-card" data-date="2026-03-01" data-name="Guest Lecture">
+                        <span class="badge badge-cyan">Guest Lecture</span>
+                        <h3 class="card-title">Industry Expert Talk on Autonomous Vehicles</h3>
+                        <p style="color: var(--text-gray); margin-bottom: 1rem;">
+                            <i class="fas fa-calendar"></i> March 1, 2026<br>
+                            <i class="fas fa-clock"></i> 4:00 PM - 6:00 PM<br>
+                            <i class="fas fa-map-marker-alt"></i> Auditorium, NIT Patna
+                        </p>
+                        <p class="card-text">
+                            Guest lecture by Dr. Rajesh Kumar from Tesla India on the future of autonomous vehicles,
+                            self-driving technology, and career opportunities in the automotive robotics industry.
+                        </p>
+                        <button class="btn btn-primary register-btn"
+                            data-event-name="Guest Lecture on Autonomous Vehicles"
+                            style="width: 100%; margin-top: 1rem;">
+                            Register Interest
+                        </button>
+                    </div>
+
+                    <!-- Event 5 -->
+                    <div class="card event-card" data-date="2026-03-20" data-name="Robocon Preparation">
+                        <span class="badge badge-cyan">Competition</span>
+                        <h3 class="card-title">ABU Robocon 2026 - Team Selection</h3>
+                        <p style="color: var(--text-gray); margin-bottom: 1rem;">
+                            <i class="fas fa-calendar"></i> March 20, 2026<br>
+                            <i class="fas fa-clock"></i> 10:00 AM - 2:00 PM<br>
+                            <i class="fas fa-map-marker-alt"></i> Robotics Lab, NIT Patna
+                        </p>
+                        <p class="card-text">
+                            Selection trials for ABU Robocon 2026 team. Participants will be evaluated on technical
+                            skills, problem-solving abilities, and teamwork. Selected members will represent NIT Patna.
+                        </p>
+                        <button class="btn btn-primary register-btn" data-event-name="ABU Robocon 2026 Team Selection"
+                            style="width: 100%; margin-top: 1rem;">
+                            Register Interest
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ongoing Projects -->
+        <section class="section" style="background: var(--secondary-bg);">
+            <div class="container">
+                <h2 class="section-title">Ongoing Projects</h2>
+                <div class="grid grid-3">
+                    <div class="card">
+                        <span class="badge">In Progress</span>
+                        <h3 class="card-title">Swarm Robotics Research</h3>
+                        <p class="card-text">
+                            Multi-robot coordination system for search and rescue operations. Funded by DST grant,
+                            expected completion: June 2026.
+                        </p>
+                        <div style="margin-top: 1rem;">
+                            <div
+                                style="background: var(--accent-blue); height: 8px; border-radius: 4px; overflow: hidden;">
+                                <div style="background: var(--success-cyan); width: 65%; height: 100%;"></div>
+                            </div>
+                            <p style="color: var(--text-gray); font-size: 0.9rem; margin-top: 0.5rem;">65% Complete</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <span class="badge">In Progress</span>
+                        <h3 class="card-title">Autonomous Delivery System</h3>
+                        <p class="card-text">
+                            Campus-wide autonomous delivery robot with obstacle avoidance and package tracking. Pilot
+                            testing phase ongoing.
+                        </p>
+                        <div style="margin-top: 1rem;">
+                            <div
+                                style="background: var(--accent-blue); height: 8px; border-radius: 4px; overflow: hidden;">
+                                <div style="background: var(--success-cyan); width: 80%; height: 100%;"></div>
+                            </div>
+                            <p style="color: var(--text-gray); font-size: 0.9rem; margin-top: 0.5rem;">80% Complete</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <span class="badge">In Progress</span>
+                        <h3 class="card-title">Humanoid Robot Development</h3>
+                        <p class="card-text">
+                            Building a humanoid robot with advanced motion control, speech recognition, and human-robot
+                            interaction capabilities.
+                        </p>
+                        <div style="margin-top: 1rem;">
+                            <div
+                                style="background: var(--accent-blue); height: 8px; border-radius: 4px; overflow: hidden;">
+                                <div style="background: var(--success-cyan); width: 45%; height: 100%;"></div>
+                            </div>
+                            <p style="color: var(--text-gray); font-size: 0.9rem; margin-top: 0.5rem;">45% Complete</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Past Events Gallery -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Past Events Gallery</h2>
+                <div class="grid grid-3">
+                    <div class="card">
+                        <img src="./images/events/workshop-students.jpg" alt="Arduino Workshop 2025"
+                            class="card-img gallery-image">
+                        <span class="badge">Workshop</span>
+                        <h3 class="card-title">Arduino & IoT Workshop</h3>
+                        <p style="color: var(--text-gray); font-size: 0.9rem;">
+                            <i class="fas fa-calendar"></i> December 10, 2025
+                        </p>
+                        <p class="card-text">
+                            Successful workshop with 80+ participants learning Arduino programming, sensor interfacing,
+                            and IoT applications.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <img src="./assets/competition-arena.jpg" alt="TechFest 2025" class="card-img gallery-image">
+                        <span class="badge">Competition</span>
+                        <h3 class="card-title">TechFest IIT Bombay 2025</h3>
+                        <p style="color: var(--text-gray); font-size: 0.9rem;">
+                            <i class="fas fa-calendar"></i> November 20, 2025
+                        </p>
+                        <p class="card-text">
+                            Our team won 2nd place in the robotics competition at Asia's largest science and technology
+                            festival.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <img src="./assets/team-collaboration.jpg" alt="Guest Lecture 2025"
+                            class="card-img gallery-image">
+                        <span class="badge">Guest Lecture</span>
+                        <h3 class="card-title">AI in Robotics - Industry Talk</h3>
+                        <p style="color: var(--text-gray); font-size: 0.9rem;">
+                            <i class="fas fa-calendar"></i> October 15, 2025
+                        </p>
+                        <p class="card-text">
+                            Inspiring session by AI researcher from IIT Delhi on machine learning applications in modern
+                            robotics.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Event Categories Info -->
+        <section class="section" style="background: var(--secondary-bg);">
+            <div class="container">
+                <h2 class="section-title">Event Categories</h2>
+                <div class="grid grid-4">
+                    <div class="card" style="text-align: center;">
+                        <i class="fas fa-chalkboard-teacher"
+                            style="font-size: 3rem; color: var(--success-cyan); margin-bottom: 1rem;"></i>
+                        <h3 class="card-title">Workshops</h3>
+                        <p class="card-text">Hands-on technical workshops on robotics, programming, and emerging
+                            technologies</p>
+                    </div>
+
+                    <div class="card" style="text-align: center;">
+                        <i class="fas fa-trophy"
+                            style="font-size: 3rem; color: var(--success-cyan); margin-bottom: 1rem;"></i>
+                        <h3 class="card-title">Competitions</h3>
+                        <p class="card-text">Internal and external robotics competitions to test your skills</p>
+                    </div>
+
+                    <div class="card" style="text-align: center;">
+                        <i class="fas fa-microphone"
+                            style="font-size: 3rem; color: var(--success-cyan); margin-bottom: 1rem;"></i>
+                        <h3 class="card-title">Guest Lectures</h3>
+                        <p class="card-text">Talks by industry experts and researchers from leading organizations</p>
+                    </div>
+
+                    <div class="card" style="text-align: center;">
+                        <i class="fas fa-users"
+                            style="font-size: 3rem; color: var(--success-cyan); margin-bottom: 1rem;"></i>
+                        <h3 class="card-title">Social Events</h3>
+                        <p class="card-text">Team building activities, club meetups, and networking sessions</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Robotics Club</h3>
+                <p>National Institute of Technology Patna</p>
+                <p>Innovating the future of robotics through education, research, and competition.</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/company/robotics-club-nit-patna" target="_blank"
+                        aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/robotics_club_nitp" target="_blank" aria-label="Instagram"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/RoboticsClubNITPatna" target="_blank" aria-label="Facebook"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://github.com/robotics-club-nitp" target="_blank" aria-label="GitHub"><i
+                            class="fab fa-github"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="about.html">About Us</a>
+                <a href="projects.html">Projects</a>
+                <a href="events.html">Events</a>
+                <a href="team.html">Team</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <a href="news.html">News & Updates</a>
+                <a href="achievements.html">Achievements</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="contact.html#faq">FAQ</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-envelope"></i> <a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                        data-cfemail="b5c7dad7dac1dcd6c6d6d9c0d7f5dbdcc1c59bd4d69bdcdb">[email&#160;protected]</a></p>
+                <p><i class="fas fa-map-marker-alt"></i> NIT Patna, Bihar 800005</p>
+                <p><i class="fas fa-clock"></i> Mon-Fri: 9:00 AM - 6:00 PM</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Robotics Club, NIT Patna. All rights reserved. | Designed for Web Development Challenge</p>
+        </div>
+    </footer>
+
+    <button id="backToTop"
+        style="display: none; position: fixed; bottom: 30px; right: 30px; background: var(--success-cyan); color: var(--primary-bg); width: 50px; height: 50px; border: none; border-radius: 50%; cursor: pointer; font-size: 1.5rem; z-index: 999; box-shadow: 0 4px 15px var(--shadow-glow);">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/filters.js"></script>
+    <script src="./js/modals.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Latest robotics news, club updates, and industry developments from Robotics Club NIT Patna">
+    <title>News - Robotics Club NIT Patna</title>
+
+
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/components.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Robotics Club</a>
+
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="news.html" class="active">News</a></li>
+                <li><a href="achievements.html">Achievements</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Page Header -->
+        <section class="hero"
+            style="background-image: url('./images/events/ai-robot-interaction.jpg'); min-height: 50vh;">
+            <div class="hero-content">
+                <h1 class="hero-title">News & Updates</h1>
+                <p class="hero-subtitle">Stay Updated with Latest Robotics Developments</p>
+            </div>
+        </section>
+
+        <!-- News Filter -->
+        <section class="section">
+            <div class="container">
+                <div class="filter-container">
+                    <button class="filter-btn news-filter-btn active" data-filter="all">All News</button>
+                    <button class="filter-btn news-filter-btn" data-filter="club">Club News</button>
+                    <button class="filter-btn news-filter-btn" data-filter="competition">Competition News</button>
+                    <button class="filter-btn news-filter-btn" data-filter="tech">Tech Innovations</button>
+                    <button class="filter-btn news-filter-btn" data-filter="research">Research</button>
+                </div>
+
+                <!-- News Grid -->
+                <div class="grid grid-2">
+                    <!-- Club News 1 -->
+                    <div class="card news-card" data-category="club">
+                        <span class="badge badge-cyan">Club News</span>
+                        <h3 class="card-title">New Lab Equipment Arrives for Advanced Projects</h3>
+                        <p style="color: var(--text-gray); font-size: 0.9rem; margin-bottom: 1rem;">
+                            <i class="fas fa-calendar"></i> December 20, 2025 | <i class="fas fa-user"></i> Admin
+                        </p>
+                        <p class="card-text">
+                            The Robotics Club has received state-of-the-art equipment including 3D printers,
+                            high-precision CNC machines, and advanced sensor kits worth ₹15 lakhs. This will
+                            significantly enhance our project development capabilities and enable students to work on
+                            more sophisticated robotics systems.
+                        </p>
+                        <a href="#" class="btn btn-outline" style="margin-top: 1rem;">Read More</a>
+                    </div>
+
+                    <!-- Competition News 1 -->
+                    <div class="card news-card" data-category="competition">
+                        <span class="badge badge-cyan">Competition</span>
+                        <h3 class="card-title">Team Selected for ABU Robocon 2026</h3>
+                        <p style="color: var(--text-gray); font-size: 0.9rem; margin-bottom: 1rem;">
+                            <i class="fas fa-calendar"></i> December 15, 2025 | <i class="fas fa-user"></i> Admin
+                        </p>
+                        <p class="card-text">
+                            After rigorous selection trials, a 15-member team has been chosen to represent NIT Patna at
+                            ABU Robocon 2026. The team will begin intensive training and robot development for the
+                            international competition scheduled for August 2026 in Vietnam.
+                        </p>
+                        <a href="#" class="btn btn-outline" style="margin-top: 1rem;">Read More</a>
+                    </div>
+
+                    <!-- Tech Innovation 1 -->
+                    <div class="card news-card" data-category="tech">
+                        <span class="badge badge-cyan">Tech Innovation</span>
+                        <h3 class="card-title">Breakthrough in Humanoid Robot Balance Control</h3>
+                        <p style="color: var(--text-gray); font-size: 0.9rem; margin-bottom: 1rem;">
+                            <i class="fas fa-calendar"></i> December 10, 2025 | <i class="fas fa-globe"></i> MIT News
+                        </p>
+                        <p class="card-text">
+                            Researchers at MIT have developed a new algorithm that enables humanoid robots to maintain
+                            balance on uneven terrain with unprecedented stability. This breakthrough could
+                            revolutionize search and rescue operations and industrial applications of bipedal robots.
+                        </p>
+                        <a href="#" class="btn btn-outline" style="margin-top: 1rem;">Read More</a>
+                    </div>
+
+                    <!-- Research News 1 -->
+                    <div class="card news-card" data-category="research">
+                        <span class="badge badge-cyan">Research</span>
+                        <h3 class="card-title">Club Members Publish Paper on Swarm Robotics</h3>
+                        <p style="color: var(--text-gray); font-size: 0.9rem; margin-bottom: 1rem;">
+                            <i class="fas fa-calendar"></i> December 5, 2025 | <i class="fas fa-user"></i> Research Team
+                        </p>
+                        <p class="card-text">
+                            Our research team has successfully published a paper titled "Decentralized Coordination in
+                            Multi-Robot Systems" in the IEEE Robotics and Automation Letters. The paper presents novel
+                            algorithms for efficient task allocation in swarm robotics applications.
+                        </p>
+                        <a href="#" class="btn btn-outline" style="margin-top: 1rem;">Read More</a>
+                    </div>
+
+                    <!-- Tech Innovation 2 -->
+                    <div class="card news-card" data-category="tech">
+                        <span class="badge badge-cyan">Tech Innovation</span>
+                        <h3 class="card-title">Tesla Unveils Next-Gen Optimus Robot</h3>
+                        <p style="color: var(--text-gray); font-size: 0.9rem; margin-bottom: 1rem;">
+                            <i class="fas fa-calendar"></i> November 30, 2025 | <i class="fas fa-globe"></i> Tesla
+                        </p>
+                        <p class="card-text">
+                            Tesla has revealed significant improvements to its Optimus humanoid robot, showcasing
+                            enhanced dexterity, faster movement, and improved AI-powered decision-making capabilities.
+                            The robot demonstrated complex manipulation tasks and natural human-like movements.
+                        </p>
+                        <a href="#" class="btn btn-outline" style="margin-top: 1rem;">Read More</a>
+                    </div>
+
+                    <!-- Club News 2 -->
+                    <div class="card news-card" data-category="club">
+                        <span class="badge badge-cyan">Club News</span>
+                        <h3 class="card-title">Workshop on ROS 2 Concludes Successfully</h3>
+                        <p style="color: var(--text-gray); font-size: 0.9rem; margin-bottom: 1rem;">
+                            <i class="fas fa-calendar"></i> November 25, 2025 | <i class="fas fa-user"></i> Event Team
+                        </p>
+                        <p class="card-text">
+                            A three-day intensive workshop on Robot Operating System 2 (ROS 2) concluded with over 60
+                            participants gaining hands-on experience in robot programming, navigation, and simulation.
+                            Expert instructors from IIT Delhi conducted the sessions.
+                        </p>
+                        <a href="#" class="btn btn-outline" style="margin-top: 1rem;">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Subscription -->
+        <section class="section" style="background: var(--secondary-bg);">
+            <div class="container">
+                <div class="card" style="max-width: 700px; margin: 0 auto; padding: 3rem; text-align: center;">
+                    <i class="fas fa-envelope"
+                        style="font-size: 4rem; color: var(--success-cyan); margin-bottom: 1.5rem;"></i>
+                    <h2 style="margin-bottom: 1rem;">Subscribe to Our Newsletter</h2>
+                    <p style="color: var(--text-gray); margin-bottom: 2rem;">
+                        Get the latest robotics news, club updates, and event notifications delivered to your inbox
+                        every week.
+                    </p>
+                    <form style="display: flex; gap: 1rem; max-width: 500px; margin: 0 auto;">
+                        <input type="email" class="form-input" placeholder="Enter your email" required style="flex: 1;">
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                    <p style="color: var(--text-gray); font-size: 0.85rem; margin-top: 1rem;">
+                        * We respect your privacy. Unsubscribe anytime.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Robotics Club</h3>
+                <p>National Institute of Technology Patna</p>
+                <p>Innovating the future of robotics through education, research, and competition.</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/company/robotics-club-nit-patna" target="_blank"
+                        aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/robotics_club_nitp" target="_blank" aria-label="Instagram"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/RoboticsClubNITPatna" target="_blank" aria-label="Facebook"><i
+                            class="=" fab fa-facebook-f"></i></a>
+                    <a href="https://github.com/robotics-club-nitp" target="_blank" aria-label="GitHub"><i
+                            class="fab fa-github"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="about.html">About Us</a>
+                <a href="projects.html">Projects</a>
+                <a href="events.html">Events</a>
+                <a href="team.html">Team</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <a href="news.html">News & Updates</a>
+                <a href="achievements.html">Achievements</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="contact.html#faq">FAQ</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-envelope"></i> <a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                        data-cfemail="9ae8f5f8f5eef3f9e9f9f6eff8daf4f3eeeab4fbf9b4f3f4">[email&#160;protected]</a></p>
+                <p><i class="fas fa-map-marker-alt"></i> NIT Patna, Bihar 800005</p>
+                <p><i class="fas fa-clock"></i> Mon-Fri: 9:00 AM - 6:00 PM</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Robotics Club, NIT Patna. All rights reserved. | Designed for Web Development Challenge</p>
+        </div>
+    </footer>
+
+    <button id="backToTop"
+        style="display: none; position: fixed; bottom: 30px; right: 30px; background: var(--success-cyan); color: var(--primary-bg); width: 50px; height: 50px; border: none; border-radius: 50%; cursor: pointer; font-size: 1.5rem; z-index: 999; box-shadow: 0 4px 15px var(--shadow-glow);">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/filters.js"></script>
+    <script src="./js/modals.js"></script>
+</body>
+
+</html>
