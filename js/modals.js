@@ -3,12 +3,12 @@
    Modal popups, image galleries
    =================================== */
 
-document.addEventListener('DOMContentLoaded', function() {
-    
+document.addEventListener('DOMContentLoaded', function () {
+
     // ===================================
     // GENERIC MODAL FUNCTIONALITY
     // ===================================
-    
+
     // Create modal HTML structure if it doesn't exist
     if (!document.getElementById('genericModal')) {
         const modalHTML = `
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         `;
         document.body.insertAdjacentHTML('beforeend', modalHTML);
-        
+
         // Add modal styles
         const modalStyles = `
             <style>
@@ -145,56 +145,56 @@ document.addEventListener('DOMContentLoaded', function() {
         `;
         document.head.insertAdjacentHTML('beforeend', modalStyles);
     }
-    
+
     const modal = document.getElementById('genericModal');
     const modalOverlay = modal.querySelector('.modal-overlay');
     const modalClose = modal.querySelector('.modal-close');
     const modalTitle = modal.querySelector('.modal-title');
     const modalBody = modal.querySelector('.modal-body');
     const modalFooter = modal.querySelector('.modal-footer');
-    
+
     // Function to open modal
-    window.openModal = function(title, content, footer = '') {
+    window.openModal = function (title, content, footer = '') {
         modalTitle.textContent = title;
         modalBody.innerHTML = content;
         modalFooter.innerHTML = footer;
         modal.classList.add('active');
         document.body.style.overflow = 'hidden';
     };
-    
+
     // Function to close modal
-    window.closeModal = function() {
+    window.closeModal = function () {
         modal.classList.remove('active');
         document.body.style.overflow = 'auto';
     };
-    
+
     // Close modal on overlay click
     modalOverlay.addEventListener('click', closeModal);
-    
+
     // Close modal on close button click
     modalClose.addEventListener('click', closeModal);
-    
+
     // Close modal on ESC key
-    document.addEventListener('keydown', function(e) {
+    document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape' && modal.classList.contains('active')) {
             closeModal();
         }
     });
-    
+
     // ===================================
     // PROJECT DETAIL MODAL
     // ===================================
     const projectDetailButtons = document.querySelectorAll('.project-detail-btn');
-    
+
     projectDetailButtons.forEach(button => {
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function () {
             const projectCard = this.closest('.project-card');
             const title = projectCard.querySelector('.card-title').textContent;
             const description = projectCard.querySelector('.card-text').textContent;
             const image = projectCard.querySelector('.card-img').src;
             const technologies = projectCard.getAttribute('data-technologies') || 'Not specified';
             const year = projectCard.getAttribute('data-year') || 'N/A';
-            
+
             const content = `
                 <img src="${image}" alt="${title}" style="width: 100%; border-radius: 8px; margin-bottom: 1.5rem;">
                 <p style="color: var(--text-gray); line-height: 1.8;">${description}</p>
@@ -207,42 +207,42 @@ document.addEventListener('DOMContentLoaded', function() {
                     <p style="color: var(--text-gray);">${year}</p>
                 </div>
             `;
-            
+
             const footer = '<button class="btn btn-primary" onclick="closeModal()">Close</button>';
-            
+
             openModal(title, content, footer);
         });
     });
-    
+
     // ===================================
     // IMAGE GALLERY MODAL
     // ===================================
     const galleryImages = document.querySelectorAll('.gallery-image');
-    
+
     galleryImages.forEach(image => {
-        image.addEventListener('click', function() {
+        image.addEventListener('click', function () {
             const imageSrc = this.src;
             const imageAlt = this.alt;
-            
+
             const content = `
                 <img src="${imageSrc}" alt="${imageAlt}" style="width: 100%; border-radius: 8px;">
                 <p style="text-align: center; margin-top: 1rem; color: var(--text-gray);">${imageAlt}</p>
             `;
-            
+
             openModal('Image Gallery', content);
         });
     });
-    
+
     // ===================================
     // EVENT REGISTRATION MODAL
     // ===================================
     const registerButtons = document.querySelectorAll('.register-btn');
-    
+
     registerButtons.forEach(button => {
-        button.addEventListener('click', function(e) {
+        button.addEventListener('click', function (e) {
             e.preventDefault();
             const eventName = this.getAttribute('data-event-name') || 'Event';
-            
+
             const content = `
                 <p style="color: var(--text-gray); margin-bottom: 1.5rem;">
                     Register your interest for: <strong style="color: var(--success-cyan);">${eventName}</strong>
@@ -266,28 +266,59 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                 </form>
             `;
-            
+
             const footer = `
                 <button class="btn btn-outline" onclick="closeModal()">Cancel</button>
                 <button class="btn btn-primary" onclick="submitRegistration('${eventName}')">Register Interest</button>
             `;
-            
+
             openModal('Event Registration', content, footer);
         });
     });
-    
+
+    // ===================================
+    // NEWS DETAIL MODAL
+    // ===================================
+    const newsDetailButtons = document.querySelectorAll('.news-detail-btn');
+
+    newsDetailButtons.forEach(button => {
+        button.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const newsCard = this.closest('.news-card');
+            const title = newsCard.querySelector('.card-title').textContent;
+            const metaInfo = newsCard.querySelector('p[style*="color: var(--text-gray)"]').innerHTML;
+            const fullContent = newsCard.getAttribute('data-full-content') || 'No additional details available.';
+            const badge = newsCard.querySelector('.badge').outerHTML;
+
+            const content = `
+                <div style="margin-bottom: 1.5rem;">${badge}</div>
+                <div style="color: var(--text-gray); font-size: 0.9rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--accent-blue); padding-bottom: 1rem;">
+                    ${metaInfo}
+                </div>
+                <div style="line-height: 1.8; color: var(--text-white);">
+                    ${fullContent}
+                </div>
+            `;
+
+            const footer = '<button class="btn btn-primary" onclick="closeModal()">Close</button>';
+
+            openModal(title, content, footer);
+        });
+    });
+
     // ===================================
     // REGISTRATION FORM SUBMISSION
     // ===================================
-    window.submitRegistration = function(eventName) {
+    window.submitRegistration = function (eventName) {
         // In production, this would send data to backend API
         // For now, show success message
-        
+
         const form = document.getElementById('registrationForm');
         if (form.checkValidity()) {
             closeModal();
             showNotification(`Registration successful for ${eventName}! We'll contact you soon.`, 'success');
-            
+
             // Future API call would be here:
             // fetch('/api/events/register', {
             //     method: 'POST',
