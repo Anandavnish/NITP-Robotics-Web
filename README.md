@@ -2,7 +2,7 @@
 
 A comprehensive 8-page responsive website for the Robotics Club at National Institute of Technology Patna, developed by **Team Library Lion** for the Web Development Challenge 2025-2026.
 
-![Robotics Club Banner](./assets/hero-robotics-lab.jpg)
+![Robotics Club Banner](./assets/README%20Banner.png)
 
 ## 🎯 Project Overview
 
