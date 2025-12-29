@@ -72,7 +72,7 @@ root/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/Anandavnish/NITP-Robotics-Web.git
+   git clone https://github.com/Anandavnish/robotics-club-website.git
    cd NITP-Robotics-Web
    ```
 
