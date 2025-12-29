@@ -7,32 +7,33 @@
    TABLET (768px and below)
    =================================== */
 @media (max-width: 768px) {
+
     /* Typography adjustments */
     h1 {
         font-size: 2.5rem;
     }
-    
+
     h2 {
         font-size: 2rem;
     }
-    
+
     h3 {
         font-size: 1.5rem;
     }
-    
+
     .hero-title {
         font-size: 2.5rem;
     }
-    
+
     .hero-subtitle {
         font-size: 1.2rem;
     }
-    
+
     /* Navigation */
     .mobile-menu-toggle {
         display: flex;
     }
-    
+
     .nav-menu {
         position: fixed;
         top: 70px;
@@ -46,82 +47,87 @@
         gap: 2rem;
         transition: left 0.3s ease;
     }
-    
+
     .nav-menu.active {
         left: 0;
     }
-    
+
     .nav-menu li a {
         font-size: 1.5rem;
     }
-    
+
     /* Grid layouts */
     .grid-2,
     .grid-3,
     .grid-4 {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     /* Container padding */
     .container {
         padding: 0 1.5rem;
     }
-    
+
     .section {
         padding: 60px 0;
     }
-    
+
     /* Hero section */
     .hero {
         min-height: 80vh;
     }
-    
+
     .hero-content {
         padding: 1.5rem;
     }
-    
+
     .hero-buttons {
         flex-direction: column;
         align-items: stretch;
     }
-    
+
     .hero-buttons .btn {
         width: 100%;
     }
-    
+
     /* Timeline */
     .timeline::before {
-        left: 20px;
+        left: 40px;
     }
-    
+
     .timeline-item {
-        flex-direction: row !important;
-        padding-left: 50px;
+        flex-direction: column !important;
+        align-items: flex-start;
+        padding-left: 0;
+        /* Reset padding, handle via margins/relative positioning if needed, or keep padding-left for whole item */
+        padding-left: 70px;
     }
-    
+
     .timeline-content {
         width: 100%;
+        margin-top: 3.5rem;
     }
-    
+
     .timeline-year {
-        left: 20px;
-        transform: translateX(0);
+        left: 40px;
+        top: 0;
+        transform: translateX(-50%);
     }
-    
+
     /* Stats container */
     .stats-container {
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
     }
-    
+
     .stat-item {
         padding: 1.5rem;
     }
-    
+
     .stat-number {
         font-size: 2.5rem;
     }
-    
+
     /* Footer */
     .footer-content {
         grid-template-columns: 1fr;
@@ -133,91 +139,92 @@
    MOBILE (480px and below)
    =================================== */
 @media (max-width: 480px) {
+
     /* Typography */
     h1 {
         font-size: 2rem;
     }
-    
+
     h2 {
         font-size: 1.75rem;
     }
-    
+
     h3 {
         font-size: 1.25rem;
     }
-    
+
     .hero-title {
         font-size: 2rem;
         letter-spacing: 1px;
     }
-    
+
     .hero-subtitle {
         font-size: 1rem;
     }
-    
+
     .hero-description {
         font-size: 0.95rem;
     }
-    
+
     /* Navigation */
     .navbar {
         padding: 1rem 1.5rem;
     }
-    
+
     .logo {
         font-size: 1.2rem;
     }
-    
+
     /* Grid layouts - single column */
     .grid-2,
     .grid-3,
     .grid-4 {
         grid-template-columns: 1fr;
     }
-    
+
     /* Container */
     .container {
         padding: 0 1rem;
     }
-    
+
     .section {
         padding: 40px 0;
     }
-    
+
     /* Buttons */
     .btn {
         padding: 0.75rem 1.5rem;
         font-size: 0.95rem;
     }
-    
+
     /* Cards */
     .card {
         padding: 1.25rem;
     }
-    
+
     .card-img {
         height: 180px;
     }
-    
+
     /* Stats */
     .stats-container {
         grid-template-columns: 1fr;
     }
-    
+
     .stat-number {
         font-size: 2rem;
     }
-    
+
     /* Filter buttons */
     .filter-container {
         gap: 0.5rem;
     }
-    
+
     .filter-btn {
         padding: 0.5rem 1rem;
         font-size: 0.875rem;
     }
-    
+
     /* Forms */
     .form-input,
     .form-textarea,
@@ -225,12 +232,12 @@
         padding: 0.75rem;
         font-size: 0.95rem;
     }
-    
+
     /* Footer */
     .footer {
         padding: 2rem 1rem 1rem;
     }
-    
+
     .social-links a {
         width: 35px;
         height: 35px;
@@ -245,11 +252,11 @@
     .container {
         max-width: 1400px;
     }
-    
+
     .hero-title {
         font-size: 5rem;
     }
-    
+
     .hero-subtitle {
         font-size: 1.75rem;
     }
@@ -263,7 +270,7 @@
         min-height: auto;
         padding: 100px 0 50px;
     }
-    
+
     .nav-menu {
         flex-direction: row;
         flex-wrap: wrap;
@@ -276,18 +283,19 @@
    PRINT STYLES
    =================================== */
 @media print {
+
     .navbar,
     .mobile-menu-toggle,
     .footer,
     .btn {
         display: none;
     }
-    
+
     body {
         background: white;
         color: black;
     }
-    
+
     .hero::before {
         display: none;
     }
