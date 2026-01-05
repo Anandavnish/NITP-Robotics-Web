@@ -27,7 +27,6 @@
 
             <ul class="nav-menu">
                 <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">About</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="events.html">Events</a></li>
                 <li><a href="team.html">Team</a></li>
@@ -49,55 +48,345 @@
         <!-- Hero Section -->
         <section class="hero">
             <canvas id="heroCanvas"></canvas>
-            <div class="hero-content">
-                <img src="./images/logo.png" alt="Robotics Club Logo" class="hero-logo">
+            <div class="flying-robot robot-left">
+                <div class="robot-container">
+                    <img src="./images/robot/flying_robot_left.png" alt="Flying Robot Left">
+                    <div class="robot-legs">
+                        <div class="leg leg-left"></div>
+                        <div class="leg leg-right"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="flying-robot robot-right">
+                <div class="robot-container">
+                    <img src="./images/robot/flying_robot_right.png" alt="Flying Robot Right">
+                    <div class="robot-legs">
+                        <div class="leg leg-left"></div>
+                        <div class="leg leg-right"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-title-group">
                 <h1 class="hero-title">Robotics Club</h1>
                 <p class="hero-subtitle">NIT Patna</p>
+            </div>
+            <div class="background-octopus">
+                <svg viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <filter id="cyanGlow" x="-50%" y="-50%" width="200%" height="200%">
+                            <feGaussianBlur stdDeviation="8" result="blur" />
+                            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                        </filter>
+                    </defs>
+
+                    <!-- Main Body -->
+                    <g class="octopus-body-group">
+                        <circle cx="100" cy="100" r="55" fill="#000" />
+                        <!-- Glowing Inner Ring -->
+                        <circle class="octopus-eye-ring" cx="100" cy="100" r="25" fill="none"
+                            stroke="var(--success-cyan)" stroke-width="6" filter="url(#cyanGlow)" />
+                        <circle cx="100" cy="100" r="28" fill="none" stroke="var(--success-cyan)" stroke-width="2"
+                            opacity="0.5" />
+                    </g>
+
+                    <!-- Tentacles (Matching the Image Style) -->
+                    <g class="tentacle-group-img">
+                        <!-- Left Tentacles -->
+                        <g class="tentacle-img">
+                            <path d="M50,85 L15,75" stroke="#000" stroke-width="6" fill="none" />
+                            <circle cx="50" cy="85" r="6" fill="#000" />
+                            <circle cx="15" cy="75" r="5" fill="#000" />
+                        </g>
+                        <g class="tentacle-img">
+                            <path d="M45,110 L10,125" stroke="#000" stroke-width="6" fill="none" />
+                            <circle cx="45" cy="110" r="6" fill="#000" />
+                            <circle cx="10" cy="125" r="5" fill="#000" />
+                        </g>
+                        <g class="tentacle-img">
+                            <path d="M60,140 L40,195" stroke="#000" stroke-width="6" fill="none" />
+                            <circle cx="60" cy="140" r="6" fill="#000" />
+                            <circle cx="40" cy="195" r="5" fill="#000" />
+                        </g>
+
+                        <!-- Right Tentacles -->
+                        <g class="tentacle-img">
+                            <path d="M150,85 L185,75" stroke="#000" stroke-width="6" fill="none" />
+                            <circle cx="150" cy="85" r="6" fill="#000" />
+                            <circle cx="185" cy="75" r="5" fill="#000" />
+                        </g>
+                        <g class="tentacle-img">
+                            <path d="M155,110 L190,125" stroke="#000" stroke-width="6" fill="none" />
+                            <circle cx="155" cy="110" r="6" fill="#000" />
+                            <circle cx="190" cy="125" r="5" fill="#000" />
+                        </g>
+                        <g class="tentacle-img">
+                            <path d="M140,140 L160,195" stroke="#000" stroke-width="6" fill="none" />
+                            <circle cx="140" cy="140" r="6" fill="#000" />
+                            <circle cx="160" cy="195" r="5" fill="#000" />
+                        </g>
+
+                        <!-- Bottom Tentacles -->
+                        <g class="tentacle-img">
+                            <path d="M100,155 L100,230" stroke="#000" stroke-width="8" fill="none" />
+                            <circle cx="100" cy="155" r="7" fill="#000" />
+                            <circle cx="100" cy="230" r="6" fill="#000" />
+                        </g>
+                        <g class="tentacle-img">
+                            <path d="M80,150 L75,210" stroke="#000" stroke-width="6" fill="none" />
+                            <circle cx="80" cy="150" r="6" fill="#000" />
+                            <circle cx="75" cy="210" r="5" fill="#000" />
+                        </g>
+                    </g>
+                </svg>
+            </div>
+            <img src="./images/logo.png" alt="Robotics Club Logo" class="hero-logo">
+            <div class="hero-content">
                 <p class="hero-description">
                     Code for Future Robotics - Innovating tomorrow's technology today through cutting-edge projects,
                     competitions, and collaborative learning
                 </p>
                 <div class="hero-buttons">
-                    <a href="about.html" class="btn btn-primary">Learn More</a>
-                    <a href="contact.html" class="btn btn-outline">Join Us</a>
+                    <a href="contact.html" class="btn btn-primary">Join Us</a>
                 </div>
             </div>
         </section>
-        </div>
+
+        <!-- Club History -->
+        <section class="section" id="about">
+            <div class="container">
+                <h2 class="section-title">Our Story</h2>
+                <div class="grid grid-2" style="align-items: center; gap: 3rem;">
+                    <div>
+                        <img src="./images/About/Robotics%20Club%20History.png" alt="Robotics Club History"
+                            style="width: 100%; border-radius: 12px; box-shadow: 0 8px 30px var(--shadow-glow);">
+                    </div>
+                    <div>
+                        <p style="color: var(--text-gray); line-height: 1.8; margin-bottom: 1.5rem;">
+                            The Robotics Club at NIT Patna was established in 2010 by a group of passionate engineering
+                            students who envisioned creating a platform for robotics enthusiasts to learn, innovate, and
+                            excel. What started as a small group of 10 members has now grown into one of the most active
+                            and successful technical clubs in the institution.
+                        </p>
+                        <p style="color: var(--text-gray); line-height: 1.8; margin-bottom: 1.5rem;">
+                            Over the years, we have participated in numerous national and international competitions,
+                            won prestigious awards, and contributed significantly to the field of robotics through our
+                            research and projects. Our club has become a breeding ground for innovation, where students
+                            from various disciplines come together to push the boundaries of what's possible with
+                            robotics technology.
+                        </p>
+                        <p style="color: var(--text-gray); line-height: 1.8;">
+                            Today, we continue to inspire the next generation of roboticists, providing them with the
+                            resources, mentorship, and opportunities to transform their ideas into reality.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <!-- Quick Navigation Cards -->
+        <!-- Mission, Vision, Objectives -->
+        <section class="section" style="background: var(--secondary-bg);">
+            <div class="container">
+                <div class="grid grid-3">
+                    <div class="card" style="text-align: center; padding: 2.5rem;">
+                        <i class="fas fa-bullseye"
+                            style="font-size: 4rem; color: var(--success-cyan); margin-bottom: 1.5rem;"></i>
+                        <h3 class="card-title">Our Mission</h3>
+                        <p class="card-text">
+                            To foster a culture of innovation and excellence in robotics by providing students with
+                            hands-on experience, cutting-edge resources, and opportunities to collaborate on
+                            groundbreaking projects that address real-world challenges.
+                        </p>
+                    </div>
+
+                    <div class="card" style="text-align: center; padding: 2.5rem;">
+                        <i class="fas fa-eye"
+                            style="font-size: 4rem; color: var(--success-cyan); margin-bottom: 1.5rem;"></i>
+                        <h3 class="card-title">Our Vision</h3>
+                        <p class="card-text">
+                            To become a leading center for robotics education and research in India, producing
+                            world-class engineers and innovators who will shape the future of autonomous systems and
+                            intelligent machines.
+                        </p>
+                    </div>
+
+                    <div class="card" style="text-align: center; padding: 2.5rem;">
+                        <i class="fas fa-trophy"
+                            style="font-size: 4rem; color: var(--success-cyan); margin-bottom: 1.5rem;"></i>
+                        <h3 class="card-title">Our Objectives</h3>
+                        <p class="card-text">
+                            Promote practical learning through workshops and projects, encourage participation in
+                            national and international competitions, facilitate research in emerging robotics
+                            technologies, and build a strong community of robotics enthusiasts.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Club Activities & Focus Areas -->
         <section class="section">
             <div class="container">
-                <h2 class="section-title">Explore Our Club</h2>
-                <div class="grid grid-4">
-                    <a href="about.html" class="card" style="text-decoration: none;">
-                        <i class="fas fa-info-circle"
-                            style="font-size: 3rem; color: var(--success-cyan); margin-bottom: 1rem;"></i>
-                        <h3 class="card-title">About Us</h3>
-                        <p class="card-text">Learn about our history, mission, and vision for robotics innovation</p>
-                    </a>
+                <h2 class="section-title">What We Do</h2>
+                <div class="grid grid-2">
+                    <div class="card">
+                        <i class="fas fa-trophy"
+                            style="font-size: 2.5rem; color: var(--success-cyan); margin-bottom: 1rem;"></i>
+                        <h3 class="card-title">Competitions</h3>
+                        <p class="card-text">
+                            We regularly participate in prestigious robotics competitions including ABU Robocon,
+                            TechFest IIT Bombay, and Smart India Hackathon. Our teams have consistently achieved top
+                            rankings and brought laurels to the institution.
+                        </p>
+                    </div>
 
-                    <a href="projects.html" class="card" style="text-decoration: none;">
-                        <i class="fas fa-robot"
-                            style="font-size: 3rem; color: var(--success-cyan); margin-bottom: 1rem;"></i>
-                        <h3 class="card-title">Projects</h3>
-                        <p class="card-text">Explore our innovative robotics projects and research work</p>
-                    </a>
+                    <div class="card">
+                        <i class="fas fa-chalkboard-teacher"
+                            style="font-size: 2.5rem; color: var(--success-cyan); margin-bottom: 1rem;"></i>
+                        <h3 class="card-title">Workshops & Training</h3>
+                        <p class="card-text">
+                            We conduct regular workshops on Arduino, Raspberry Pi, ROS, Machine Learning, Computer
+                            Vision, and other cutting-edge technologies. These sessions are designed to provide hands-on
+                            experience and practical knowledge.
+                        </p>
+                    </div>
 
-                    <a href="events.html" class="card" style="text-decoration: none;">
-                        <i class="fas fa-calendar-alt"
-                            style="font-size: 3rem; color: var(--success-cyan); margin-bottom: 1rem;"></i>
-                        <h3 class="card-title">Events</h3>
-                        <p class="card-text">Join our workshops, competitions, and guest lectures</p>
-                    </a>
+                    <div class="card">
+                        <i class="fas fa-microscope"
+                            style="font-size: 2.5rem; color: var(--success-cyan); margin-bottom: 1rem;"></i>
+                        <h3 class="card-title">Research & Development</h3>
+                        <p class="card-text">
+                            Our members engage in cutting-edge research in areas like autonomous navigation, swarm
+                            robotics, human-robot interaction, and AI-powered robotic systems. We collaborate with
+                            faculty and industry partners on innovative projects.
+                        </p>
+                    </div>
 
-                    <a href="team.html" class="card" style="text-decoration: none;">
+                    <div class="card">
                         <i class="fas fa-users"
-                            style="font-size: 3rem; color: var(--success-cyan); margin-bottom: 1rem;"></i>
-                        <h3 class="card-title">Our Team</h3>
-                        <p class="card-text">Meet the talented individuals driving our success</p>
-                    </a>
+                            style="font-size: 2.5rem; color: var(--success-cyan); margin-bottom: 1rem;"></i>
+                        <h3 class="card-title">Community Building</h3>
+                        <p class="card-text">
+                            We organize tech talks, guest lectures from industry experts, and networking events to build
+                            a strong robotics community. Our alumni network spans across leading tech companies and
+                            research institutions worldwide.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Infrastructure & Lab Facilities -->
+        <section class="section" style="background: var(--secondary-bg);">
+            <div class="container">
+                <h2 class="section-title">Our Facilities</h2>
+                <p class="text-center" style="color: var(--text-gray); max-width: 800px; margin: 0 auto 3rem;">
+                    We are equipped with state-of-the-art infrastructure and advanced equipment to support our members'
+                    learning and project development.
+                </p>
+
+                <div class="grid grid-3">
+                    <div class="card">
+                        <img src="./images/About/electronics%20LAB.png" alt="Electronics Lab" class="card-img">
+                        <h3 class="card-title">Electronics Lab</h3>
+                        <p class="card-text">
+                            Fully equipped with oscilloscopes, function generators, power supplies, soldering stations,
+                            and a wide range of electronic components for circuit design and testing.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <img src="./images/About/Mechanical%20Workshop.png" alt="Mechanical Workshop" class="card-img">
+                        <h3 class="card-title">Mechanical Workshop</h3>
+                        <p class="card-text">
+                            3D printers, CNC machines, laser cutters, and traditional machining tools for fabricating
+                            robot chassis, mechanical components, and custom parts.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <img src="./images/About/AI%20and%20Computing%20LAB.png" alt="AI & Computing Lab"
+                            class="card-img">
+                        <h3 class="card-title">AI & Computing Lab</h3>
+                        <p class="card-text">
+                            High-performance workstations with GPU support for running AI/ML algorithms, computer vision
+                            applications, and robot simulations using ROS and Gazebo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Club Timeline/Milestones -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Our Journey</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-year">2010</div>
+                        <div class="timeline-content card2">
+                            <h3 style="color: var(--success-cyan); margin-bottom: 0.5rem;">Club Founded</h3>
+                            <p style="color: var(--text-gray);">
+                                Robotics Club established with 10 founding members and a vision to promote robotics
+                                education at NIT Patna.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">2013</div>
+                        <div class="timeline-content card2">
+                            <h3 style="color: var(--success-cyan); margin-bottom: 0.5rem;">First National Competition
+                            </h3>
+                            <p style="color: var(--text-gray);">
+                                Participated in ABU Robocon for the first time, reaching the national finals and gaining
+                                recognition.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">2016</div>
+                        <div class="timeline-content card2">
+                            <h3 style="color: var(--success-cyan); margin-bottom: 0.5rem;">Dedicated Lab Space</h3>
+                            <p style="color: var(--text-gray);">
+                                Acquired a dedicated 2000 sq ft lab space with advanced equipment and facilities for
+                                robotics projects.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">2019</div>
+                        <div class="timeline-content card2">
+                            <h3 style="color: var(--success-cyan); margin-bottom: 0.5rem;">International Recognition
+                            </h3>
+                            <p style="color: var(--text-gray);">
+                                Won silver medal at ABU Robocon International and published first research paper in IEEE
+                                conference.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">2022</div>
+                        <div class="timeline-content card2">
+                            <h3 style="color: var(--success-cyan); margin-bottom: 0.5rem;">Research Grant</h3>
+                            <p style="color: var(--text-gray);">
+                                Received ₹5 Lakh research grant from DST for autonomous systems research project.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">2025</div>
+                        <div class="timeline-content card2">
+                            <h3 style="color: var(--success-cyan); margin-bottom: 0.5rem;">50+ Active Members</h3>
+                            <p style="color: var(--text-gray);">
+                                Grown to 50+ active members with multiple ongoing projects and collaborations with
+                                industry partners.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -250,7 +539,7 @@
                 <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
                     <a href="contact.html" class="btn btn-primary" style="font-size: 1.1rem; padding: 1rem 2.5rem;">Join
                         Now</a>
-                    <a href="about.html" class="btn btn-outline" style="font-size: 1.1rem; padding: 1rem 2.5rem;">Learn
+                    <a href="#about" class="btn btn-outline" style="font-size: 1.1rem; padding: 1rem 2.5rem;">Learn
                         More</a>
                 </div>
             </div>
@@ -283,7 +572,7 @@
 
             <div class="footer-section">
                 <h3>Quick Links</h3>
-                <a href="about.html">About Us</a>
+                <a href="#about">About Us</a>
                 <a href="projects.html">Projects</a>
                 <a href="events.html">Events</a>
                 <a href="team.html">Team</a>

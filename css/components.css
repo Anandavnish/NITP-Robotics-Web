@@ -322,9 +322,96 @@
     justify-content: center;
     text-align: center;
     background-color: transparent;
-    /* Fallback/Base color */
     overflow: hidden;
-    /* Ensure particles don't scrollbar */
+}
+
+.flying-robot {
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+    width: 250px;
+    height: auto;
+    filter: drop-shadow(0 0 40px rgba(0, 217, 255, 0.5));
+    animation: floatRobot 6s ease-in-out infinite;
+}
+
+.robot-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.robot-container img {
+    width: 100%;
+    height: auto;
+    mix-blend-mode: screen;
+    -webkit-mask-image: radial-gradient(circle, black 30%, transparent 70%);
+    mask-image: radial-gradient(circle, black 30%, transparent 70%);
+}
+
+.robot-legs {
+    position: absolute;
+    top: 70%;
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    z-index: -1;
+}
+
+.leg {
+    width: 15px;
+    height: 50px;
+    background: #000;
+    border-radius: 6px;
+    box-shadow: 0 0 8px rgba(0, 217, 255, 0.3);
+    animation: legDangle 3s ease-in-out infinite;
+}
+
+.leg-left {
+    animation-delay: 0s;
+}
+
+.leg-right {
+    animation-delay: -1.5s;
+}
+
+@keyframes legDangle {
+
+    0%,
+    100% {
+        transform: rotate(-10deg);
+    }
+
+    50% {
+        transform: rotate(10deg);
+    }
+}
+
+.robot-left {
+    top: 15%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.robot-right {
+    top: 20%;
+    right: 12%;
+    animation-delay: -3s;
+    /* Removed transform: scaleX(-1) to keep design identical as requested */
+}
+
+@keyframes floatRobot {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-30px) rotate(5deg);
+    }
 }
 
 #heroCanvas {
@@ -354,37 +441,178 @@
     pointer-events: none;
 }
 
+.background-octopus {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 350px;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.4;
+    filter: drop-shadow(0 0 20px rgba(0, 217, 255, 0.2));
+    animation: octopusFloat 8s ease-in-out infinite, octopusGlow 4s ease-in-out infinite;
+}
+
+.background-octopus svg {
+    width: 100%;
+    height: 100%;
+}
+
+.tentacle-img {
+    transform-origin: 100px 100px;
+    animation: tentacleSway 6s ease-in-out infinite;
+}
+
+.octopus-eye-ring {
+    animation: eyePulse 3s ease-in-out infinite;
+}
+
+@keyframes eyePulse {
+
+    0%,
+    100% {
+        opacity: 0.7;
+        transform: scale(0.95);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+}
+
+@keyframes tentacleSway {
+
+    0%,
+    100% {
+        transform: rotate(-2deg);
+    }
+
+    50% {
+        transform: rotate(2deg);
+    }
+}
+
+.tentacle-img:nth-child(even) {
+    animation-delay: -1.5s;
+}
+
+@keyframes octopusGlow {
+
+    0%,
+    100% {
+        filter: drop-shadow(0 0 10px rgba(0, 217, 255, 0.1));
+    }
+
+    50% {
+        filter: drop-shadow(0 0 25px rgba(0, 217, 255, 0.3));
+    }
+}
+
+@keyframes headGlow {
+
+    0%,
+    100% {
+        fill: #000;
+    }
+
+    50% {
+        fill: #001a2e;
+    }
+}
+
+@keyframes tentacleGlow {
+
+    0%,
+    100% {
+        stroke: #000;
+        filter: drop-shadow(0 0 2px rgba(0, 217, 255, 0.2));
+    }
+
+    50% {
+        stroke: #001a2e;
+        /* Very dark blue center */
+        filter: drop-shadow(0 0 8px rgba(0, 217, 255, 0.5));
+    }
+}
+
+@keyframes octopusFloat {
+
+    0%,
+    100% {
+        transform: translate(-50%, -50%) translateY(0);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) translateY(-30px);
+    }
+}
+
+@keyframes tentacleWave {
+
+    0%,
+    100% {
+        transform: rotate(0deg) scale(1);
+    }
+
+    50% {
+        transform: rotate(3deg) scale(1.05);
+    }
+}
+
+.hero-title-group {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, calc(-50% - 180px));
+    /* Position above octopus */
+    text-align: center;
+    z-index: 4;
+    width: 100%;
+}
+
 .hero-content {
     position: relative;
     z-index: 2;
     max-width: 800px;
     padding: 2rem;
-    /* Blur effect for text focus */
-    background: rgba(26, 26, 46, 0.3);
-    /* Slight semi-transparent dark bg */
-    backdrop-filter: blur(5px);
-    /* The visual blur focus */
-    border-radius: 16px;
-    border: 1px solid rgba(0, 217, 255, 0.1);
-    /* Subtle border */
     display: flex;
     flex-direction: column;
     align-items: center;
     /* Center everything including logo */
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
 }
 
 .hero-logo {
-    width: 200px;
-    /* Enlarge logo as requested */
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    width: 120px;
     height: auto;
-    margin-bottom: 1.5rem;
-    filter: drop-shadow(0 0 15px rgba(0, 217, 255, 0.6));
-    /* Enhanced glow */
+    filter: brightness(1.2) contrast(1.1) drop-shadow(0 0 20px rgba(0, 217, 255, 0.8));
+    z-index: 3;
+    animation: pulseLogoGlow 3s infinite ease-in-out;
+}
+
+@keyframes pulseLogoGlow {
+
+    0%,
+    100% {
+        filter: brightness(1.2) contrast(1.1) drop-shadow(0 0 15px rgba(0, 217, 255, 0.6));
+        transform: scale(1);
+    }
+
+    50% {
+        filter: brightness(1.4) contrast(1.2) drop-shadow(0 0 30px rgba(0, 217, 255, 0.9));
+        transform: scale(1.05);
+    }
 }
 
 .hero-title {
     font-size: 4rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     text-transform: uppercase;
     letter-spacing: 3px;
     animation: fadeInUp 1s ease;
@@ -393,7 +621,7 @@
 .hero-subtitle {
     font-size: 1.5rem;
     color: var(--success-cyan);
-    margin-bottom: 2rem;
+    margin: 0;
     font-family: 'Inter', sans-serif;
     animation: fadeInUp 1s ease 0.2s backwards;
 }
