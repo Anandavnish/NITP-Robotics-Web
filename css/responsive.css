@@ -233,6 +233,80 @@
         font-size: 0.95rem;
     }
 
+    /* Hero section mobile fixes */
+    .hero {
+        min-height: 100vh;
+        padding-top: 80px;
+    }
+
+    /* Hide flying robots on mobile - they clutter the view */
+    .flying-robot {
+        display: none;
+    }
+
+    /* Center logo at top on mobile */
+    .hero-logo {
+        position: absolute;
+        top: 90px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        z-index: 10;
+    }
+
+    /* Adjust hero title group positioning */
+    .hero-title-group {
+        top: 30%;
+        transform: translate(-50%, -50%);
+        padding: 0 1rem;
+    }
+
+    .hero-title {
+        font-size: 1.8rem;
+        letter-spacing: 2px;
+        margin-bottom: 0.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    /* Scale down background octopus */
+    .background-octopus {
+        width: 250px;
+        height: 250px;
+        opacity: 0.3;
+    }
+
+    /* Fix hero content positioning */
+    .hero-content {
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 100%;
+        max-width: 100%;
+        padding: 1rem;
+        margin-top: 2rem;
+    }
+
+    .hero-description {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+
+    .hero-buttons {
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 280px;
+    }
+
     /* Footer */
     .footer {
         padding: 2rem 1rem 1rem;
