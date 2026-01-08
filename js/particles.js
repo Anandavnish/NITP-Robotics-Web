@@ -36,8 +36,18 @@ document.addEventListener('DOMContentLoaded', function () {
         draw() {
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
-            ctx.fillStyle = this.color;
+            ctx.fillStyle = '#000000'; // Black center
             ctx.fill();
+
+            // Blue light boundary effect
+            ctx.lineWidth = 2;
+            ctx.strokeStyle = '#00d9ff'; // Cyan border
+            ctx.shadowBlur = 15; // Glow effect
+            ctx.shadowColor = '#00d9ff';
+            ctx.stroke();
+
+            // Reset shadow for performance and next operations
+            ctx.shadowBlur = 0;
         }
 
         // Update particle position
@@ -106,7 +116,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (window.innerWidth < 768) numberOfParticles = 40; // Reduce for mobile
 
         for (let i = 0; i < numberOfParticles; i++) {
-            let size = (Math.random() * 2) + 1; // Size between 1px and 3px
+            let size = (Math.random() * 3) + 3; // Size between 3px and 6px (larger for visibility)
             let x = (Math.random() * ((canvas.width - size * 2) - (size * 2)) + size * 2);
             let y = (Math.random() * ((canvas.height - size * 2) - (size * 2)) + size * 2);
             // Reduced speed: -0.5 to 0.5

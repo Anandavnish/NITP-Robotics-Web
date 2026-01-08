@@ -63,7 +63,8 @@
     position: relative;
     overflow: hidden;
     z-index: 1;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--success-cyan);
+    box-shadow: 0 0 15px rgba(0, 217, 255, 0.4), inset 0 0 20px rgba(0, 217, 255, 0.1);
     transition: all 0.3s ease;
     height: 100%;
 }
@@ -450,7 +451,7 @@
     height: 350px;
     z-index: 1;
     pointer-events: none;
-    opacity: 0.4;
+    opacity: 0.9;
     filter: drop-shadow(0 0 20px rgba(0, 217, 255, 0.2));
     animation: octopusFloat 8s ease-in-out infinite, octopusGlow 4s ease-in-out infinite;
 }

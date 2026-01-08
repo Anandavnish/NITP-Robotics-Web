@@ -239,9 +239,20 @@
         padding-top: 80px;
     }
 
-    /* Hide flying robots on mobile - they clutter the view */
+    /* Show flying robots on mobile but resize them */
     .flying-robot {
-        display: none;
+        display: block;
+        width: 80px;
+    }
+
+    .robot-left {
+        top: 100px;
+        left: 10px;
+    }
+
+    .robot-right {
+        top: 110px;
+        right: 10px;
     }
 
     /* Center logo at top on mobile */
@@ -275,7 +286,7 @@
     .background-octopus {
         width: 250px;
         height: 250px;
-        opacity: 0.3;
+        opacity: 0.8;
     }
 
     /* Fix hero content positioning */
