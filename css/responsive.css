@@ -344,6 +344,64 @@
         height: 35px;
         font-size: 1rem;
     }
+
+    /* ===================================
+       PERFORMANCE OPTIMIZATIONS
+       =================================== */
+
+    /* Disable heavy blur effects */
+    .navbar {
+        backdrop-filter: none;
+        background: rgba(26, 26, 46, 0.98);
+        /* Solid background instead */
+    }
+
+    /* Simplify text shadows */
+    h1,
+    h2,
+    h3,
+    h4,
+    .hero-title,
+    .section-title {
+        animation: none !important;
+        /* Stop pulsing animation */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        /* Simple static shadow */
+    }
+
+    .section-title::after {
+        box-shadow: none;
+    }
+
+    /* Reduce card shadows */
+    .card,
+    .card2,
+    .glow-card {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        transition: none;
+        /* Disable hover transitions on touch */
+    }
+
+    .card:hover,
+    .card2:hover,
+    .glow-card:hover {
+        transform: none;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Disable expensive SVG filters */
+    .octopus-eye-ring {
+        filter: none !important;
+        /* Remove Gaussian blur */
+    }
+
+    /* Remove heavy particle/background animations if needed via CSS */
+    .bg-robot,
+    .bg-trophy,
+    .bg-newspaper {
+        display: none;
+        /* Hide background elements to save resources */
+    }
 }
 
 /* ===================================

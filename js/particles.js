@@ -42,8 +42,15 @@ document.addEventListener('DOMContentLoaded', function () {
             // Blue light boundary effect
             ctx.lineWidth = 2;
             ctx.strokeStyle = '#00d9ff'; // Cyan border
-            ctx.shadowBlur = 15; // Glow effect
-            ctx.shadowColor = '#00d9ff';
+
+            // Performance optimization: Only add glow on larger screens
+            if (window.innerWidth > 768) {
+                ctx.shadowBlur = 15; // Glow effect
+                ctx.shadowColor = '#00d9ff';
+            } else {
+                ctx.shadowBlur = 0;
+                ctx.shadowColor = 'transparent';
+            }
             ctx.stroke();
 
             // Reset shadow for performance and next operations
@@ -113,7 +120,8 @@ document.addEventListener('DOMContentLoaded', function () {
         // Adjust particle count for mobile
         let numberOfParticles = (canvas.width * canvas.height) / 9000;
         if (numberOfParticles > 90) numberOfParticles = 90; // Cap at ~90 as requested
-        if (window.innerWidth < 768) numberOfParticles = 40; // Reduce for mobile
+        if (numberOfParticles > 90) numberOfParticles = 90; // Cap at ~90 as requested
+        if (window.innerWidth < 768) numberOfParticles = 25; // Reduce for mobile performance
 
         for (let i = 0; i < numberOfParticles; i++) {
             let size = (Math.random() * 3) + 3; // Size between 3px and 6px (larger for visibility)
