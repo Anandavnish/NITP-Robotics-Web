@@ -56,6 +56,7 @@ h6 {
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 1rem;
+    animation: pulseHeadingGlow 4s ease-in-out infinite;
 }
 
 h1 {
@@ -71,6 +72,18 @@ h2 {
 h3 {
     font-size: 1.75rem;
     font-weight: 600;
+}
+
+@keyframes pulseHeadingGlow {
+
+    0%,
+    100% {
+        text-shadow: 0 0 10px rgba(0, 217, 255, 0.5), 0 0 20px rgba(0, 217, 255, 0.2);
+    }
+
+    50% {
+        text-shadow: 0 0 20px rgba(0, 217, 255, 0.8), 0 0 40px rgba(0, 217, 255, 0.4);
+    }
 }
 
 h4 {
@@ -197,7 +210,7 @@ a:hover {
     text-align: center;
     margin-bottom: 3rem;
     position: relative;
-    text-shadow: 0 0 10px rgba(0, 217, 255, 0.5), 0 0 20px rgba(0, 217, 255, 0.3);
+    /* Inherits pulseHeadingGlow from h2 */
 }
 
 .section-title::after {

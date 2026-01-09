@@ -616,7 +616,7 @@
     margin-bottom: 0.5rem;
     text-transform: uppercase;
     letter-spacing: 3px;
-    animation: fadeInUp 1s ease;
+    animation: fadeInUp 1s ease, pulseHeadingGlow 4s ease-in-out infinite 1s;
 }
 
 .hero-subtitle {
@@ -624,7 +624,7 @@
     color: var(--success-cyan);
     margin: 0;
     font-family: 'Inter', sans-serif;
-    animation: fadeInUp 1s ease 0.2s backwards;
+    animation: fadeInUp 1s ease 0.2s backwards, pulseHeadingGlow 4s ease-in-out infinite 1.2s;
 }
 
 .hero-description {
