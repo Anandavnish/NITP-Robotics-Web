@@ -30,8 +30,30 @@
     }
 
     /* Navigation */
+    .navbar {
+        padding: 1rem 1.5rem;
+    }
+
+    .nav-container {
+        position: relative;
+        justify-content: center;
+        /* Center horizontally */
+    }
+
+    .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 1.2rem;
+        white-space: nowrap;
+        z-index: 10;
+    }
+
     .mobile-menu-toggle {
         display: flex;
+        margin-left: auto;
+        position: relative;
+        z-index: 11;
     }
 
     .nav-menu {
@@ -166,14 +188,8 @@
         font-size: 0.95rem;
     }
 
-    /* Navigation */
-    .navbar {
-        padding: 1rem 1.5rem;
-    }
+    /* Navigation inherited from 768px */
 
-    .logo {
-        font-size: 1.2rem;
-    }
 
     /* Grid layouts - single column */
     .grid-2,
