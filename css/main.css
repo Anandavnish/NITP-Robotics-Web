@@ -343,3 +343,139 @@ a:hover {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--action-blue);
 }
+
+/* ===================================
+   BACKGROUND ROBOTS ANIMATION
+   =================================== */
+.bg-robots-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    /* Brought forward slightly but still behind content if content has z-index */
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.bg-robot {
+    position: absolute;
+    opacity: 0.15;
+    /* Adjusted for icons */
+    animation: floatTrophy 8s infinite ease-in-out;
+    /* Updated to new flow animation */
+    color: var(--success-cyan);
+    /* Icon color */
+    font-size: 150px;
+    /* Base icon size */
+    text-shadow: 0 0 20px var(--success-cyan), 0 0 40px var(--accent-blue);
+    /* Glowing effect */
+}
+
+@keyframes floatRobot {
+    0% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+
+    33% {
+        transform: translate(40px, -60px) rotate(10deg) scale(1.1);
+    }
+
+    66% {
+        transform: translate(-30px, 30px) rotate(-5deg) scale(0.95);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+}
+
+/* Robot Variations */
+/* Robot Variations */
+.robot-1 {
+    top: 12%;
+    left: 5%;
+    font-size: 140px;
+    animation-duration: 9s;
+}
+
+.robot-2 {
+    top: 20%;
+    right: 8%;
+    font-size: 180px;
+    opacity: 0.1;
+    animation-duration: 11s;
+    animation-delay: -2s;
+    animation-direction: reverse;
+}
+
+.robot-3 {
+    bottom: 25%;
+    left: 10%;
+    font-size: 160px;
+    animation-duration: 10s;
+    animation-delay: -4s;
+}
+
+.robot-4 {
+    top: 60%;
+    right: 5%;
+    font-size: 130px;
+    animation-duration: 7s;
+    animation-delay: -1s;
+}
+
+.robot-5 {
+    bottom: 5%;
+    right: 25%;
+    font-size: 200px;
+    opacity: 0.1;
+    animation-duration: 12s;
+    animation-delay: -5s;
+    animation-direction: reverse;
+}
+
+/* ===================================
+   BACKGROUND TROPHIES (Override)
+   =================================== */
+.bg-trophy {
+    color: var(--success-cyan);
+    /* Changed to Blue/Cyan */
+    text-shadow: 0 0 20px var(--success-cyan), 0 0 40px var(--accent-blue);
+    /* Blue glow */
+    opacity: 0.15;
+    /* Restored opacity to match robots */
+    animation: floatTrophy 8s ease-in-out infinite;
+    /* Distinct floating animation */
+}
+
+@keyframes floatTrophy {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(-5deg);
+    }
+
+    50% {
+        transform: translateY(-25px) rotate(5deg);
+    }
+}
+
+/* ===================================
+   BACKGROUND NEWSPAPER (Override)
+   =================================== */
+.bg-newspaper {
+    background-color: var(--success-cyan);
+    width: 220px;
+    height: 160px;
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M21 4H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zM11 17H4v-2h7v2zM11 13H4v-2h7v2zM11 9H4V7h7v2zM20 17h-7v-2h7v2zM20 13h-7v-2h7v2zM20 9h-7V7h7v2z'/%3E%3C/svg%3E");
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M21 4H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zM11 17H4v-2h7v2zM11 13H4v-2h7v2zM11 9H4V7h7v2zM20 17h-7v-2h7v2zM20 13h-7v-2h7v2zM20 9h-7V7h7v2z'/%3E%3C/svg%3E");
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    filter: drop-shadow(0 0 10px var(--success-cyan));
+    opacity: 0.15;
+    animation: floatTrophy 10s ease-in-out infinite;
+}
