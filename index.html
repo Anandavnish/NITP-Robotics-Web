@@ -14,12 +14,34 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/components.css">
     <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="./css/splash.css">
 
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
+    <!-- Splash Screen -->
+    <div id="splash-screen">
+        <div class="splash-content">
+            <div class="splash-robots-container">
+                <div class="robot-wrapper robot-left-wrapper">
+                    <img src="./images/robot_left.png" alt="Robot Left">
+                </div>
+                <div class="robot-wrapper robot-center-wrapper">
+                    <img src="./images/robot_center.png" alt="Robot Center">
+                </div>
+                <div class="robot-wrapper robot-right-wrapper">
+                    <img src="./images/robot_right.png" alt="Robot Right">
+                </div>
+            </div>
+            <div class="splash-loader">
+                <div class="loader-bar"></div>
+            </div>
+            <p class="splash-text">ROBOTICS CLUB</p>
+        </div>
+    </div>
+
     <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="nav-container">
@@ -75,7 +97,6 @@
                     <defs>
                         <filter id="cyanGlow" x="-50%" y="-50%" width="200%" height="200%">
                             <feGaussianBlur stdDeviation="8" result="blur" />
-                            <feComposite in="SourceGraphic" in2="blur" operator="over" />
                         </filter>
                     </defs>
 
@@ -614,6 +635,7 @@
     <script src="./js/particles.js"></script>
     <script src="./js/filters.js"></script>
     <script src="./js/modals.js"></script>
+    <script src="./js/splash.js"></script>
 </body>
 
 </html>

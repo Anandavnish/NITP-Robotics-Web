@@ -1,0 +1,139 @@
+/* Splash Screen Styles */
+#splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    /* Deep techy dark */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    overflow: hidden;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+#splash-screen.fade-out {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.splash-content {
+    text-align: center;
+    position: relative;
+    max-width: 600px;
+    width: 90%;
+}
+
+.splash-robots-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 2rem;
+    position: relative;
+    width: 100%;
+    min-height: 400px;
+}
+
+.robot-wrapper {
+    width: 250px;
+    position: relative;
+    opacity: 0;
+}
+
+.robot-wrapper img {
+    width: 100%;
+    height: auto;
+    filter: saturate(2.5) contrast(1.3) brightness(1.2);
+    mix-blend-mode: screen;
+}
+
+/* Specific Wrapper Animations */
+.robot-left-wrapper {
+    animation: expandVanishLeft 4s ease-in-out forwards;
+}
+
+.robot-right-wrapper {
+    animation: expandVanishRight 4s ease-in-out forwards;
+}
+
+.robot-center-wrapper {
+    animation: appearVanishCenter 4s ease-in-out forwards;
+    animation-delay: 0.5s;
+}
+
+/* Animations */
+@keyframes expandVanishLeft {
+    0% {
+        opacity: 0;
+        transform: scale(0.5) translateX(0);
+    }
+
+    20% {
+        opacity: 1;
+        transform: scale(1) translateX(0);
+    }
+
+    60% {
+        opacity: 1;
+        transform: scale(1.1) translateX(-50px);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.5) translateX(-300px);
+    }
+}
+
+@keyframes expandVanishRight {
+    0% {
+        opacity: 0;
+        transform: scale(0.5) translateX(0);
+    }
+
+    20% {
+        opacity: 1;
+        transform: scale(1) translateX(0);
+    }
+
+    60% {
+        opacity: 1;
+        transform: scale(1.1) translateX(50px);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.5) translateX(300px);
+    }
+}
+
+@keyframes appearVanishCenter {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    30% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    70% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(2.5);
+    }
+}
+
+@keyframes loading {
+    to {
+        left: 100%;
+    }
+}
